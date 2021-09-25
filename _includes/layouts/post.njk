@@ -6,6 +6,10 @@ section: post
 <div class="[ wrapper ] [ flow ]">
   <article>
     <section class="recipe-intro">
+    <p>
+    {% set categoryUrl %}/categories/{{ category }}/{% endset %}
+    <a class="category" href="{{ categoryUrl | url }}" rel="category">{{ category }}</a>
+    <p>
       <h1 class="recipe-name"> {{ title }}</h1>
       <p class="tagline"> {{ tagline }} </p>
         {% if tags %}
@@ -14,7 +18,7 @@ section: post
             {%- if tag != "post" -%}
               <li>
               {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-              <a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
+              <a class="tag smaller-text" href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
               </li>
             {%- endif -%}
           {% endfor %}
@@ -38,9 +42,11 @@ section: post
       </ul>
     </div>
 
+{% if story.length %}
     <div class="recipe-commentary flow">
       {{ story  | markdownify | safe  }}
     </div>
+          {% endif %}
 
     <div class="recipe-facts">
       <div class="stats info-box">
@@ -82,7 +88,7 @@ section: post
 <h2 class="section-headline">Ingredients</h2>
 
 {% for groups in ingredients_list %}
-  <p><strong>{{ groups.group_name}} </strong></p>
+  <p><strong> {% if groups.group_name != "Ingredient List" %} {{ groups.group_name }} {% endif %}</strong></p>
 <ul>
   {% for items in groups.ingredient %}
   <li>
@@ -115,7 +121,7 @@ section: post
       <div class="single-instruction flow">
       <h3 class="step-title"> {{ steps.title }}</h3>
 
-      {% if steps.ingredients_used %}
+      {% if steps.ingredients_used.amount.length %}
       <ul class="step-needed">
         {% for items in steps.ingredients_used %}
           <li>
@@ -133,13 +139,26 @@ section: post
         </div>
       {% endif %}
 
- {% if steps.instruction_tip %}
+ {% if steps.instruction_tip.title.length %}
+ <div class="step-tips">
+        <label for="toggle" class="show-tip"><div class="tip-activate">
+          <p class="smaller-text">Just The Tip</p>
+          <svg class="tip-arrow" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="8" cy="8" r="8" fill="inherit"></circle>
+  <path d="M10.666 11.4075L4.74009 11.4075L4.74009 5.48157" stroke="#1B4D7A"></path>
+  <path d="M4.73958 11.4076L11.4062 4.74097" stroke="#1B4D7A"></path>
+              </svg>
+            </div>
+          </label>
+          <input type="checkbox" id="toggle">
+          <div class="tip-inner flow">
    {% for items in steps.instruction_tip %}</h4>
        <h4 class="step-title">{{ items.title }}</h4>
        <p>{{ items.description}}</p>
        <img src="{{ items.tip_photo }}">
    {% endfor %}
    {% endif %}
+</div>
 
     </li>
   {% endfor %}
@@ -148,6 +167,7 @@ section: post
 </section>
 
 <section class="recipe-footer flow">
+  {% if other_notes.length %}
   <div class="recipe-notes flow info-box">
     <h3 class="step-title">Other Notes</h3>
       <ul>
@@ -158,6 +178,7 @@ section: post
         {% endfor %}
       </ul>
     </div>
+    {% endif %}
     <div class="flow inspired-by">
     {% if inspired_by %}
       <p class="font-mono upper strong deepsea">This recipe was inspired by:&nbsp;</p>
@@ -168,8 +189,3 @@ section: post
 
 </article>
 </div>
-
-
-<nav>
-  <a href="{{ '/blog/' | url }}">← Blog index</a>
-</nav>

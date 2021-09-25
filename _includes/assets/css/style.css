@@ -1,0 +1,144 @@
+/* GLOBAL CSS */
+
+.tag-filters {
+  display: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+
+body {
+  background: #fff url("http://peterchastagner.com/food-pattern.svg");
+  background-size: 300px;
+  background-repeat: repeat;
+  line-height: var(--ratio);
+  font-family: var(--font-plain);
+  color: var(--bw-darkest);
+  font-size: var(--s0);
+}
+
+.site-wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: var(--line-height-small);
+    font-family: var(--font-fancy);
+    font-weight: 700;
+    hyphens: auto;
+}
+
+h1 {
+  font-size: clamp(var(--s2), 5vw , var(--s3));
+}
+
+h2 {
+  font-size: var(--s1);
+}
+
+h3 {
+  font-size: var(--s1);
+}
+
+h4 {
+  font-size: var(--s0);
+}
+
+
+
+.smaller-text {
+  font-size: calc(var(--s0) * 0.8);
+}
+
+.category {
+    color: var(--color-deepsea);
+    font-family: var(--font-mono);
+    //font-weight: 800;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.tag {
+  background: var(--color-sky);
+  padding: .0625em .25em ;
+  font-family: var(--font-mono);
+}
+
+/* HEADER / FOOTER CSS */
+
+header {
+  background: var(--bw-lightest);
+  border-bottom: 1px solid var(--bw-darkest);
+  box-shadow: 0 8px 0 0 var(--color-sand);
+  margin-bottom: var(--s2);
+}
+
+header > div {
+  display: flex;
+  justify-content: space-between;
+    padding: var(--s0) 0px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: var(--s1);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav a {
+  color: var(--color-deepsea);
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+nav > ul {
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 1.5rem;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+header a, footer a {
+  text-decoration: none;
+}
+
+header a:not(.nvr-deco):hover, footer a:not(.nvr-deco):hover {
+    text-decoration: underline;
+}
+
+footer > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--s1) 0px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+footer {
+  background: var(--bw-lightest);
+  border-top: 1px solid var(--bw-darkest);
+  box-shadow:  0 0 0 8px var(--color-sand);
+  margin-top: var(--s5);
+}

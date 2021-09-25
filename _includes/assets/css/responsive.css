@@ -1,0 +1,8 @@
+
+@media (min-width: 80em) {
+
+.recipe-instructions {
+    --flow-space: var(--s5);
+}
+
+}

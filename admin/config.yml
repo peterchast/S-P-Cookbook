@@ -20,8 +20,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Tagline", name: "tagline", widget: "string" }
-      - { label: "Easy Slug", name: "slug", widget: "string", required: false }
-      - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
+      - { label: "Easy Link", name: "easy_slug", widget: "string", hint: "No spaces, uppercase letters, or special characters" }
       - widget: select
         label: "Category"
         name: "category"
@@ -32,28 +31,28 @@ collections:
           - { label: "Appetizers", value: "appetizers" }
           - { label: "Snacks", value: "snacks" }
           - { label: "Drinks", value: "drinks" }
+      - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
       - { label: Featured Image, name: featured_image, widget: image}
       - label: "Why We Love It"
         name:  "love_list"
         widget: "list"
-        summary: '{{ fields.love_reason }}'
+        summary: '{{fields.love_reason}}'
         fields:
           - {label: Reason, name: love_reason, widget: string}
       - { label: "Recipe Story", name: "story", widget: "markdown", required: false }
       - label: "Ingredients List"
         name: "ingredients_list"
         widget: "list"
-        summary: '{{fields.group_name}}'
         fields:
-          - {label: Ingredient Group, name: group_name, widget: string, required: false}
+          - {label: Ingredient Group, name: group_name, widget: string, required: false, default: "Ingredient List", hint: "Leave alone unless you need multiple ingredient groups"}
           - label: "Ingredient"
             name: "ingredient"
             widget: "list"
             summary: '{{fields.amount}} {{fields.unit}} {{fields.ingredient}}'
             fields:
-              - {label: Amount, name: amount, widget: string}
-              - {label: Unit, name: unit, widget: string}
-              - {label: Ingredient, name: ingredient, widget: string}
+              - {label: Amount, name: amount, widget: string, required: false}
+              - {label: Unit, name: unit, widget: string, required: false}
+              - {label: Ingredient, name: ingredient, widget: string, required: false}
       - label: "Special Equipment Needed"
         name: "special_equipment"
         widget: "list"

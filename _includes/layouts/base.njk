@@ -4,20 +4,23 @@
 	{% include "components/head.njk" %}
 
 	<body>
+<div class="site-wrap">
+			<header role="banner">
+  <div class="wrapper">
+      <a href="/" class="nvr-deco logo" aria-label="{{ site.name }} - home">{% include "static/img/brand.svg" %}{{ metadata.title }}</a>
+			<nav aria-label="Primary navigaton">
+          {% include "components/nav.njk" %}
+      </nav>
+    </div>
+</header>
 
-		<header>
-			<em>
-				<a href="{{ '/' | url }}">{{ metadata.title }}</a>
-			</em>
-			{% include "components/nav.njk" %}
-		</header>
 
 		<main>
 			{{ layoutContent | safe }}
 		</main>
 
 		{% include "components/footer.njk" %}
-
+</div>
 	</body>
 
 </html>

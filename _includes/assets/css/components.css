@@ -1,0 +1,70 @@
+/* RECIPE LIST */
+
+.recipe-list {
+    padding: 0px;
+    --min: 20ch;
+    --gap: 1rem;
+    display: grid;
+    grid-gap: 2rem 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(var(--min), 1fr));
+}
+
+.recipe-tagline {
+  display: none;
+}
+
+.recipe-card {
+    --img-ratio: 3/2;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0.25rem 0.25rem 0 0 var(--bw-darkest);
+    border-radius: 0.5rem;
+    background-color: var(--bw-lightest);
+    border: 2px solid var(--bw-darkest);
+    height: 100%;
+    position: relative;
+}
+
+.recipe-card > img {
+    /* Fallback for `aspect-ratio` of defining
+  a height */
+  height: max(18vh, 12rem);
+  object-fit: cover;
+  width: 100%;
+}
+
+/* When supported, use `aspect-ratio` */
+@supports (aspect-ratio: 1) {
+  .recipe-card > img {
+    aspect-ratio: var(--img-ratio);
+    height: auto;
+  }
+}
+
+.recipe-card > img:first-child {
+  border-radius: 0.3rem 0.3rem 0 0;
+}
+
+.recipe-card:hover {
+    transform: translateY(-.5rem) scale(1.01);
+    box-shadow: 0.25rem 0.25rem 0 0 var(--color-coral);
+    transition: transform 350ms cubic-bezier(0,.26,.13,1.55),box-shadow .2s;
+}
+
+.recipe-info {
+  padding: var(--s-1) var(--s0) var(--s1) var(--s0);
+  --flow-space: var(--s-4);
+  overflow-wrap: break-word;
+}
+
+.card-button::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: 0 0;
+    cursor: pointer;
+}

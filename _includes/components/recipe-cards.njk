@@ -1,0 +1,15 @@
+<ul role="list" class="recipe-list">
+  {% for post in postslist | reverse %}
+    <li>
+      <article class="recipe-card">
+        <img src="{{ post.data.featured_image }}">
+          <div class="recipe-info flow">
+            <p class="category smaller-text">{{ post.data.category }}</p>
+            <h4>{{ post.data.title }}</h4>
+            <p class="smaller-text top-s0 recipe-tagline"> {{ post.data.tagline }} </p>
+          </div>
+          <a href="{{ post.url | url }}" class="card-button"></a>
+      </article>
+    </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,124 @@
+ul, ol {
+  padding-inline-start: 0px;
+  margin: 0;
+}
+
+ul[role="list"], ol[role="list"] {
+    padding: 0px;
+}
+
+ul:not([role="list"]) {
+  list-style: none;
+}
+
+ul:not([role="list"])>li {
+    position: relative;
+    padding-left: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: var(--ratio);
+}
+
+ul:not([role="list"])>li:before {
+    position: absolute;
+    left: .25rem;
+    top: 5.5px;
+    content: "●";
+    color: var(--color-coral);
+    font-size: .75rem;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.font-fancy {
+    font-family: var(--font-fancy);
+}
+
+.font-plain {
+    font-family: var(--font-plain);
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.strong {
+  font-weight: 800;
+}
+
+.deepsea {
+  color: var(--color-deepsea);
+}
+
+.wrapper {
+  //max-width: calc(75rem + var(--s0));
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--s0);
+  padding-right: var(--s0);
+}
+
+article section:not(.featured-img) {
+  //max-width: calc(48rem + var(--s0));
+  max-width: 69ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flow > * + * {
+    margin-top: var(--flow-space, var(--s0));
+}
+
+.flow > p + p {
+    margin-top: var(--s0);
+}
+
+section {
+  margin-top: var(--s2);
+  margin-bottom: var(--s3);
+}
+
+.top-s0 {
+  margin-top: var(--s0);
+}
+
+
+
+.skip-link:not(:focus), .visually-hidden, :not(:hover)>.heading-permalink {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+.skip-link {
+    position: absolute;
+    top: clamp(1.09rem,1rem + .47vw,1.33rem);
+    left: clamp(1.09rem,1rem + .47vw,1.33rem);
+}
+.button {
+    display: inline-block;
+    padding: .8rem 2.5rem;
+    border-radius: clamp(1.37rem,1.21rem + .8vw,1.78rem);
+    border: 2px solid #f586ae;
+    background: #1c2334;
+    color: #f3eee4;
+    cursor: pointer;
+    font: inherit;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: clamp(1.09rem,1rem + .47vw,1.33rem);
+    line-height: 1;
+    letter-spacing: .05ch;
+    text-decoration: none;
+    box-shadow: 0 0 10px 2px rgb(0 0 0 / 15%);
+    font-family: atkinson_hyperlegible,Arial,sans-serif;
+}

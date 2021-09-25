@@ -3,4 +3,15 @@ layout: layouts/base.njk
 section: home
 ---
 
-{{ layoutContent | safe }}
+<div class="[ wrapper ] [ flow ]">
+  <section class="cookbook-intro">
+    <h1>Look at all these recipes... yummmm!</h1>
+    {{ layoutContent | safe }}
+  </section>
+  <section class="tag-filters">
+  </section>
+  <section class="recipe-browse">
+    {% set postslist = collections.post %}
+    {% include "components/recipe-cards.njk" %}
+  </section>
+</div>
