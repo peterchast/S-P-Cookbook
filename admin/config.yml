@@ -2,6 +2,9 @@ backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
 
+# Please run "npx netlify-cms-proxy-server" for local backend
+local_backend: true
+
 # Uncomment below to enable drafts
 # publish_mode: editorial_workflow
 
@@ -16,11 +19,88 @@ collections:
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Author", name: "author", widget: "string", default: "Anonymous" }
-      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Tagline", name: "tagline", widget: "text" }
+      - { label: "Easy Slug", name: "slug", widget: "string" }
       - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - widget: select
+        label: "Category"
+        name: "category"
+        multiple: false
+        create: false
+        options:
+          - { label: "Main Dishes", value: "main_dishes" }
+          - { label: "Appetizers", value: "appetizers" }
+          - { label: "Snacks", value: "snacks" }
+          - { label: "Drinks", value: "drinks" }
+      - { label: Featured Image, name: featured_image, widget: image}
+      - label: "Why We Love It"
+        name:  "love_list"
+        widget: "list"
+        summary: '{{ fields.love_reason }}'
+        fields:
+          - {label: Reason, name: love_reason, widget: string}
+      - { label: "Recipe Story", name: "story", widget: "markdown" }
+      - label: "Ingredients List"
+        name: "ingredients_list"
+        widget: "list"
+        summary: '{{fields.group_name}}'
+        fields:
+          - {label: Ingredient Group, name: group_name, widget: string}
+          - label: "Ingredients List"
+            name: "ingredients_list"
+            widget: "list"
+            summary: '{{fields.amount}} {{fields.unit}} {{fields.ingredient}}'
+            fields:
+              - {label: Amount, name: amount, widget: string}
+              - {label: Unit, name: unit, widget: string}
+              - {label: Ingredient, name: ingredient, widget: string}
+      - label: "Special Equipment Needed"
+        name: "special_equipment"
+        widget: "list"
+        summary: '{{ fields.equipment }}'
+        fields:
+          - {label: Equipment, name: equipment, widget: string}
+      - {label: Active Time, name: active_time, widget: string}
+      - {label: Total Time, name: total_time, widget: string}
+      - {label: Yield, name: yield, widget: string}
+      - label: "Instructions"
+        name: "instructions"
+        widget: "list"
+        summary: '{{fields.title}}'
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Description, name: description, widget: markdown}
+          - label: Instruction Photo
+            name: instruction_photo
+            widget: image
+            allow_multiple: true
+          - label: "Ingredients Used"
+            name: "ingredients_used"
+            widget: "list"
+            summary: '{{fields.amount}} {{fields.unit}} {{fields.ingredient}}'
+            fields:
+              - {label: Amount, name: amount, widget: string}
+              - {label: Unit, name: unit, widget: string}
+              - {label: Ingredient, name: ingredient, widget: string}
+          - label: "Just The Tip"
+            name: "instruction_tip"
+            widget: "list"
+            summary: '{{fields.title}}'
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Description, name: description, widget: markdown}
+              - label: Instruction Photo
+                name: instruction_photo
+                widget: image
+                allow_multiple: true
+      - label: "Other Notes"
+        name:  "other_notes"
+        widget: "list"
+        summary: '{{ fields.note }}'
+        fields:
+          - {label: Note, name: note, widget: string}
+      - { label: "Recipe Inspired By", name: "inspired_by", widget: "markdown" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
   # Our pages e.g. About
   - name: "pages"
     label: "Page"
