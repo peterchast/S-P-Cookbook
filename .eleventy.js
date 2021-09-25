@@ -4,7 +4,15 @@ const UglifyJS = require("uglify-js");
 const htmlmin = require("html-minifier");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
+const mdit = require('markdown-it')({
+        html: false,
+        breaks: true,
+        linkify: true
+    });
+
 module.exports = function(eleventyConfig) {
+
+  eleventyConfig.addFilter("markdownify", markdownString => mdit.render(markdownString));
 
   // Eleventy Navigation https://www.11ty.dev/docs/plugins/navigation/
   eleventyConfig.addPlugin(eleventyNavigationPlugin);

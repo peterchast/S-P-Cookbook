@@ -19,8 +19,8 @@ collections:
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Tagline", name: "tagline", widget: "text" }
-      - { label: "Easy Slug", name: "slug", widget: "string" }
+      - { label: "Tagline", name: "tagline", widget: "string" }
+      - { label: "Easy Slug", name: "slug", widget: "string", required: false }
       - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
       - widget: select
         label: "Category"
@@ -39,15 +39,15 @@ collections:
         summary: '{{ fields.love_reason }}'
         fields:
           - {label: Reason, name: love_reason, widget: string}
-      - { label: "Recipe Story", name: "story", widget: "markdown" }
+      - { label: "Recipe Story", name: "story", widget: "markdown", required: false }
       - label: "Ingredients List"
         name: "ingredients_list"
         widget: "list"
         summary: '{{fields.group_name}}'
         fields:
-          - {label: Ingredient Group, name: group_name, widget: string}
-          - label: "Ingredients List"
-            name: "ingredients_list"
+          - {label: Ingredient Group, name: group_name, widget: string, required: false}
+          - label: "Ingredient"
+            name: "ingredient"
             widget: "list"
             summary: '{{fields.amount}} {{fields.unit}} {{fields.ingredient}}'
             fields:
@@ -58,6 +58,7 @@ collections:
         name: "special_equipment"
         widget: "list"
         summary: '{{ fields.equipment }}'
+        required: false
         fields:
           - {label: Equipment, name: equipment, widget: string}
       - {label: Active Time, name: active_time, widget: string}
@@ -74,24 +75,27 @@ collections:
             name: instruction_photo
             widget: image
             allow_multiple: true
+            required: false
           - label: "Ingredients Used"
             name: "ingredients_used"
             widget: "list"
             summary: '{{fields.amount}} {{fields.unit}} {{fields.ingredient}}'
             fields:
-              - {label: Amount, name: amount, widget: string}
-              - {label: Unit, name: unit, widget: string}
-              - {label: Ingredient, name: ingredient, widget: string}
+              - {label: Amount, name: amount, widget: string, required: false }
+              - {label: Unit, name: unit, widget: string, required: false }
+              - {label: Ingredient, name: ingredient, widget: string, required: false }
           - label: "Just The Tip"
             name: "instruction_tip"
             widget: "list"
+            required: false
             summary: '{{fields.title}}'
             fields:
               - {label: Title, name: title, widget: string}
               - {label: Description, name: description, widget: markdown}
-              - label: Instruction Photo
-                name: instruction_photo
+              - label: tip Photo
+                name: tip_photo
                 widget: image
+                required: false
                 allow_multiple: true
       - label: "Other Notes"
         name:  "other_notes"

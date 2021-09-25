@@ -3,28 +3,172 @@ layout: layouts/base.njk
 section: post
 ---
 
-<article>
-  <h1>{{ title }}</h1>
-  <p>
-    <small>
-      <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time> by <a href="/authors/{{ author | slug }}/">{{ author }}</a>
-    </small>
-  </p>
+<div class="[ wrapper ] [ flow ]">
+  <article>
+    <section class="recipe-intro">
+      <h1 class="recipe-name"> {{ title }}</h1>
+      <p class="tagline"> {{ tagline }} </p>
+        {% if tags %}
+          <ul class="tag-list" role="list">
+          {% for tag in tags %}
+            {%- if tag != "post" -%}
+              <li>
+              {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+              <a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
+              </li>
+            {%- endif -%}
+          {% endfor %}
+          </ul>
+        {% endif %}
+    </section>
 
-  {{ layoutContent | safe }}
+    <section class="featured-img">
+      <img src="{{ featured_image}}">
+    </section>
 
-  {% if tags %}
-    <p>
-    {% for tag in tags %}
-      {%- if tag != "post" -%}
-        {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-        <a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
-      {%- endif -%}
-    {% endfor %}
-    </p>
-  {% endif %}
+  <section class="recipe-about flow">
+    <div class="reasons-why">
+      <h2>WHY WE LOVE IT</h2>
+      <ul>
+        {% for reason in love_list %}
+          <li>
+            {{ reason.love_reason }}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="recipe-commentary flow">
+      {{ story  | markdownify | safe  }}
+    </div>
+
+    <div class="recipe-facts">
+      <div class="stats info-box">
+        <div class="stats-time">
+          <span class="label">
+            <p class="smaller-text">Active:</p>
+          </span>
+          <span class="data">
+            <h3>{{ active_time }}</h3>
+          </span>
+        </div>
+      </div>
+      <div class="stats info-box">
+        <div class="stats-time">
+          <span class="label">
+            <p class="smaller-text">Total:</p>
+            </span>
+    <span class="data">
+      <h3>{{ total_time }}</h3>
+    </span>
+  </div>
+  </div>
+  <div class="stats info-box">
+    <div class="stats-yield">
+    <span class="label">
+      <p class="smaller-text">Yield:</p>
+    </span>
+    <span class="data">
+      <h3>{{ yield }}</h3>
+    </span>
+    </div>
+  </div>
+</div>
+
+</section>
+
+<section class="recipe-ingredients flow">
+
+<h2 class="section-headline">Ingredients</h2>
+
+{% for groups in ingredients_list %}
+  <p><strong>{{ groups.group_name}} </strong></p>
+<ul>
+  {% for items in groups.ingredient %}
+  <li>
+    {{ items.amount }} {{ items.unit }} {{ items.ingredient }}
+  </li>
+  {% endfor %}
+</ul>
+{% endfor %}
+
+{% if special_equipment %}
+<p><strong>Special equipment you'll need 🔪🍳:</strong></p>
+<ul>
+  {% for items in special_equipment %}
+  <li>
+    {{ items.equipment }}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+</section>
+
+<section class="recipe-instructions flow">
+
+<h2 class="section-headline">Instructions</h2>
+
+<ol role="list" class="instructions-list flow">
+  {% for steps in instructions %}
+    <li>
+      <div class="single-instruction flow">
+      <h3 class="step-title"> {{ steps.title }}</h3>
+
+      {% if steps.ingredients_used %}
+      <ul class="step-needed">
+        {% for items in steps.ingredients_used %}
+          <li>
+            {{ items.amount }} {{ items.unit }} {{ items.ingredient }}
+          </li>
+        {% endfor %}
+          </ul>
+        {% endif %}
+
+      <p class="step-text">{{ steps.description }}</p>
+
+      {% if steps.instruction_photo %}
+      <div class="step-photos">
+          <img src="{{ steps.instruction_photo }}">
+        </div>
+      {% endif %}
+
+ {% if steps.instruction_tip %}
+   {% for items in steps.instruction_tip %}</h4>
+       <h4 class="step-title">{{ items.title }}</h4>
+       <p>{{ items.description}}</p>
+       <img src="{{ items.tip_photo }}">
+   {% endfor %}
+   {% endif %}
+
+    </li>
+  {% endfor %}
+</ol>
+
+</section>
+
+<section class="recipe-footer flow">
+  <div class="recipe-notes flow info-box">
+    <h3 class="step-title">Other Notes</h3>
+      <ul>
+        {% for items in other_notes %}
+        <li>
+          {{ items.note }}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="flow inspired-by">
+    {% if inspired_by %}
+      <p class="font-mono upper strong deepsea">This recipe was inspired by:&nbsp;</p>
+      {{ inspired_by | markdownify | safe }}
+{% endif %}
+</div>
+</section>
 
 </article>
+</div>
+
 
 <nav>
   <a href="{{ '/blog/' | url }}">← Blog index</a>
