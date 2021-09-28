@@ -12,6 +12,13 @@ const mdit = require('markdown-it')({
 
 module.exports = function(eleventyConfig) {
 
+  // Returns work items, sorted by display order then filtered by featured
+  eleventyConfig.addCollection('featuredWork', collection => {
+    return collection.getFilteredByGlob('posts/*.md').filter(
+    x => x.data.category["drinks"]
+  );
+});
+
   eleventyConfig.addFilter("markdownify", markdownString => mdit.render(markdownString));
 
   // Eleventy Navigation https://www.11ty.dev/docs/plugins/navigation/

@@ -27,11 +27,11 @@ collections:
         multiple: false
         create: false
         options:
-          - { label: "Main Dishes", value: "main_dishes" }
-          - { label: "Appetizers", value: "appetizers" }
+          - { label: "Main Dishes", value: "main-dishes" }
           - { label: "Snacks", value: "snacks" }
+          - { label: "Desserts", value: "desserts" }
           - { label: "Drinks", value: "drinks" }
-      - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
+      - { label: "Tags", name: "tags", widget: "list", default: ["recipe"] }
       - { label: Featured Image, name: featured_image, widget: image}
       - label: "Why We Love It"
         name:  "love_list"
@@ -99,10 +99,11 @@ collections:
       - label: "Other Notes"
         name:  "other_notes"
         widget: "list"
+        required: false
         summary: '{{ fields.note }}'
         fields:
           - {label: Note, name: note, widget: string}
-      - { label: "Recipe Inspired By", name: "inspired_by", widget: "markdown" }
+      - { label: "Recipe Inspired By", name: "inspired_by", widget: "markdown", required: false }
       - { label: "Publish Date", name: "date", widget: "datetime" }
   # Our pages e.g. About
   - name: "pages"

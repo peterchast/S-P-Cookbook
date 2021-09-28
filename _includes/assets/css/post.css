@@ -308,9 +308,13 @@ ol.instructions-list > li:before {
 
 .step-tips {
   display: inline-flex;
-  flex-direction: column;
   background: #fbf9ee;
   margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+div:has(.tip-inner) {
+  background: black;
 }
 
 .tip-activate {
@@ -331,13 +335,14 @@ ol.instructions-list > li:before {
 .tip-inner {
   display: none;
   padding: 0 1rem 1rem 1rem;
+  flex-basis: 100%;
 }
 
 input[type="checkbox"]:checked ~ .tip-inner {
   display: block;
 }
 
-input#toggle {
+input[id^="toggle_"] {
   position: absolute;
   left: -999em;
 }
@@ -347,11 +352,16 @@ input#toggle {
 }
 
 .recipe-footer {
-  margin-top: var(--s5);
+  margin: var(--s5) 0 0 0;
+  padding: var(--s2) var(--s1) var(--s2) var(--s1);
 }
 
-.inspired-by {
-  margin-top: var(--s2);
+.recipe-footer  ul:not([role=list])>li {
+    margin-bottom: var(--s1);
+}
+
+.recipe-footer .step-text {
+    border-top: 1px solid var(--color-shell);
 }
 
 .inspired-by p {

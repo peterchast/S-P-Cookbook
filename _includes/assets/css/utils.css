@@ -52,6 +52,10 @@ ul:not([role="list"])>li:before {
   color: var(--color-deepsea);
 }
 
+.sand-bg {
+    background-color: var(--color-sand);
+}
+
 .wrapper {
   //max-width: calc(75rem + var(--s0));
   max-width: 1200px;
@@ -61,11 +65,15 @@ ul:not([role="list"])>li:before {
   padding-right: var(--s0);
 }
 
-article section:not(.featured-img) {
+article section:not(.featured-img){
   //max-width: calc(48rem + var(--s0));
   max-width: 69ch;
   margin-left: auto;
   margin-right: auto;
+}
+
+article>footer {
+  margin-top: 0px;
 }
 
 .flow > * + * {
@@ -81,11 +89,19 @@ section {
   margin-bottom: var(--s3);
 }
 
+
 .top-s0 {
   margin-top: var(--s0);
 }
 
-
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
 
 .skip-link:not(:focus), .visually-hidden, :not(:hover)>.heading-permalink {
     border: 0;
