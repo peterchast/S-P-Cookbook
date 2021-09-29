@@ -23,7 +23,7 @@ story: >-
   weekly meal for our household and I wanted an easy go-to that made me feel a
   connection to home in New Orleans and this fit the bill perfectly. I even
   insisted that my night be Mondays to match the New Orleans tradition of slow
-  cooking beans all day on laundry day. 
+  cooking beans all day on laundry day.
 
 
   HOWEVER, my mom would certainly not approve of this recipe:
@@ -87,10 +87,11 @@ instructions:
         unit: cups
         ingredient: water
   - title: Simmer the holy trinity.
-    description: >-
-      
-
-      Add vegetable oil to large stock pot on medium heat. Once it heats up a bit, add the Holy Trinity (see tip). Then add garlic and other spices. Turn the heat down to medium low, and let simmer for 5-20 minutes (until slightly browned and everyone who enters the room says ‘that smells delicious’).
+    description: Add vegetable oil to large stock pot on medium heat. Once it heats
+      up a bit, add the Holy Trinity (see tip). Then add garlic and other
+      spices. Turn the heat down to medium low, and let simmer for 5-20 minutes
+      (until slightly browned and everyone who enters the room says ‘that smells
+      delicious’).
     instruction_tip:
       - description: When I include the holy trinity, I usually chop the onion first,
           and add it to the pot, then chop the celery and add it to the pot, and
@@ -105,6 +106,5 @@ instructions:
         unit: cups
         ingredient: “Holy Trinity” (1-2 celery stalks, whole small onion, whole bell
           pepper (any color), chopped)
-      - {}
 date: 2021-09-29T04:42:39.101Z
 ---

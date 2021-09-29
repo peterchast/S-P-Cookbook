@@ -98,7 +98,7 @@ section: post
 </ul>
 {% endfor %}
 
-{% if special_equipment %}
+{% if special_equipment.length %}
 <p><strong>Special equipment you'll need 🔪🍳:</strong></p>
 <ul>
   {% for items in special_equipment %}
@@ -121,7 +121,7 @@ section: post
       <div class="single-instruction flow">
       <h3 class="step-title"> {{ steps.title }}</h3>
 
-      {% if steps.ingredients_used.amount.length %}
+      {% if steps.ingredients_used.length %}
       <ul class="step-needed">
         {% for items in steps.ingredients_used %}
           <li>
@@ -172,7 +172,11 @@ section: post
     </li>
   {% endfor %}
   <li>
-    <h3 class="step-title">GET IT!</h3>
+  <div class="flow">
+    <h3 class="step-title">Get Some!</h3>
+    <p class="step-text">You just made a recipe! I'm so proud of you! It's time to honor your dilligence and perserverance by consuming the fruits (or vegetables, et al.) of your labor.</p>
+    <p><em>Oh you made a dessert to share with friends at a dinner party? Eat some right now anyway!<em></p>
+    </div>
   </li>
 </ol>
 

@@ -43,13 +43,15 @@ FEATURED PHOTO
   margin-right: calc( var(--s0) * -1);
 }
 
+
 .featured-img > img {
     /* Fallback for `aspect-ratio` of defining
   a height */
-  height: max(18vh, 12rem);
-  object-fit: cover;
+  //height: max(18vh, 12rem);
+  //object-fit: cover;
   width: 100%;
 }
+
 
 /* When supported, use `aspect-ratio` */
 @supports (aspect-ratio: 1) {
@@ -139,10 +141,14 @@ RECIPE ABOUT
     line-height: .84;
 }
 
+.recipe-commentary {
+    --flow-space: var(--s0);
+}
 
 .recipe-facts {
   display: flex;
   gap: 1rem;
+  -webkit-gap: 1rem;
   flex-wrap: wrap;
 }
 

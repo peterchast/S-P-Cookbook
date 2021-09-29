@@ -19,6 +19,22 @@ ul:not([role="list"])>li {
     line-height: var(--ratio);
 }
 
+ol {
+    position: relative;
+    padding-left: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: var(--ratio);
+}
+
+ol>li {
+  position: relative;
+  padding-left: .4rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: var(--ratio);
+}
+
 ul:not([role="list"])>li:before {
     position: absolute;
     left: .25rem;
@@ -67,7 +83,7 @@ ul:not([role="list"])>li:before {
 
 article section:not(.featured-img){
   //max-width: calc(48rem + var(--s0));
-  max-width: 69ch;
+  max-width: 741.6px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -80,9 +96,12 @@ article>footer {
     margin-top: var(--flow-space, var(--s0));
 }
 
+/*
 .flow > p + p {
     margin-top: var(--s0);
 }
+
+*/
 
 section {
   margin-top: var(--s2);

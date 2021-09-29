@@ -5,7 +5,7 @@
   --s-3: calc(var(--s0) / var(--ratio) / var(--ratio) / var(--ratio));
   --s-2: calc(var(--s0) / var(--ratio) / var(--ratio));
   --s-1: calc(var(--s0) / var(--ratio));
-  --s0: clamp( 1rem, calc(1rem + 0.333vw), 1.3rem);
+  --s0: 20.8px;
   --s1: calc(var(--s0) * var(--ratio));
   --s2: calc(var(--s0) * var(--ratio) * var(--ratio));
   --s3: calc(var(--s0) * var(--ratio) * var(--ratio) * var(--ratio));
