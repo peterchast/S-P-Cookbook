@@ -1,3 +1,26 @@
+/* ALGOLIA SEARCH https://www.algolia.com/doc/tools/crawler/netlify-plugin/front-end/ */
+
+
+.aa-DetachedSearchButton:before {
+  content: "🔍"
+}
+
+.aa-DetachedSearchButton {
+  border: none !important;
+  color: #000 !important;
+  align-items: start !important;
+  line-height: var(--ratio) !important;
+  font-size: var(--s0) !important;
+}
+
+.aa-DetachedSearchButtonPlaceholder {
+  display: none !important;
+}
+
+.aa-DetachedSearchButtonIcon {
+  display: none !important;
+}
+
 /* RECIPE LIST */
 
 .recipe-list {

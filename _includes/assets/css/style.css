@@ -88,7 +88,7 @@ header {
   margin-bottom: var(--s2);
 }
 
-header > div {
+.inner-header {
   display: flex;
   justify-content: space-between;
     padding: var(--s0) 0px;

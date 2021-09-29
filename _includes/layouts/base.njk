@@ -5,15 +5,16 @@
 
 	<body>
 <div class="site-wrap">
-			<header role="banner">
-  <div class="wrapper">
-      <a href="/" class="nvr-deco logo" aria-label="{{ site.name }} - home">{% include "static/img/brand.svg" %}</a>
-			<div id="search"></div>
-			<nav aria-label="Primary navigaton">
+  <header role="banner">
+    <div class="wrapper">
+		  <div class="inner-header">
+        <a href="/" class="nvr-deco logo" aria-label="{{ site.name }} - home">{% include "static/img/brand.svg" %}</a>
+			  <nav aria-label="Primary navigaton">
           {% include "components/nav.njk" %}
-      </nav>
-    </div>
-</header>
+        </nav>
+		  </div>
+		</div>
+  </header>
 
 
 		<main>
