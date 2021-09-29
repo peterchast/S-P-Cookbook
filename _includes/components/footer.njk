@@ -7,12 +7,8 @@
         Nothing about this website is being monetized. It was created purely for personal use. Come to think of it, how did you even get here? We must really like you. You are special 🏅
       </p>
       <nav aria-label="Primary navigaton">
-        <ul role="list">
-          {% for category in categories %}
-            <li><a href="/categories/{{ category.name }}/">{{ category.name }}</a></li>
-          {% endfor %}
-          <li><a class="nvr-deco" href="https://letmegooglethat.com/?q=Help!+I%27m+too+lazy+to+browse+through+recipes...">🔍</a></li>
-        </ul>
+          {% include "components/nav.njk" %}
       </nav>
+      <div id="search"></div>
     </div>
 </footer>

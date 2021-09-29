@@ -1,9 +1,17 @@
+{% set pageTitle = title + ' - ' + metadata.title %}
+
+{# We don't want any duplication. This is likely for the homepage #}
+{% if metadata.title === title %}
+  {% set pageTitle = title %}
+{% endif %}
+
 <head>
   <meta charset="utf-8">
   <link rel="dns-prefetch" href="https://identity.netlify.com">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ renderData.title or title or metadata.title }}</title>
+  <title>{{ pageTitle }}</title>
   <meta name="description" content="{{ metaDescription or renderData.metaDescription or metadata.description }}">
+  <link rel="icon" href="https://emojicdn.elk.sh/🍲" />
   <meta name="robots" content="noindex">
   <script async src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
@@ -20,4 +28,15 @@
     {% include "assets/js/inline.js" %}
   {% endset %}
   <script>{{ js | jsmin | safe }}</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js"></script>
+<script type="text/javascript">
+  algoliasearchNetlify({
+    appId: 'OJUEIEP8WU',
+    apiKey: '<cdd19ee13ea2be5c9b834510ea0a6f66>',
+    siteId: 'ca8bf5d3-2a00-49e5-8168-0a47c8e4d035',
+    branch: 'master',
+    selector: 'div#search',
+  });
+</script>
 </head>
