@@ -869,8 +869,8 @@ body[data-theme="dark"] {
     font-family: var(--aa-font-family);
     font-size: 16px;
     font-size: var(--aa-font-size);
-    height: 44px;
-    height: var(--aa-search-input-height);
+    //height: 44px;
+    //height: var(--aa-search-input-height);
     margin: 0;
     padding: 0 5.5px;
     padding: 0 calc(var(--aa-search-input-height) / 8);

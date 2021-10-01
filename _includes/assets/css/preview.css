@@ -1,0 +1,9 @@
+{% set css %}
+  {% include "assets/css/root.css" %}
+  {% include "assets/css/style.css" %}
+  {% include "assets/css/utils.css" %}
+  {% include "assets/css/components.css" %}
+  {% include "assets/css/post.css" %}
+  {% include "assets/css/responsive.css" %}
+  {% include "assets/css/algolia.css" %}
+{% endset %}
