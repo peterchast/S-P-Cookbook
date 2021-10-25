@@ -47,8 +47,7 @@ ingredients_list:
       - amount: "2"
         unit: cups
         ingredient: rice (any type)
-      - ingredient: Cajun Seasoning (I prefer Tony Chachare’s) if using full sodium
-          beans, use less.
+      - ingredient: "Cajun Seasoning "
         amount: Many
         unit: dashes
       - amount: A few
@@ -106,5 +105,58 @@ instructions:
         unit: cups
         ingredient: “Holy Trinity” (1-2 celery stalks, whole small onion, whole bell
           pepper (any color), chopped)
+  - title: Add garlic and spice and everything nice!
+    description: Stir in the garlic and spices.
+    ingredients_used:
+      - amount: "2 "
+        unit: cloves
+        ingredient: " garlic (minced)"
+      - amount: "2 "
+        ingredient: Bay Leaves
+      - amount: A few shakes
+        ingredient: dried basil
+      - amount: "Many "
+        unit: "dashes "
+        ingredient: Cajun Seasoning
+    instruction_tip:
+      - title: How to know when you've used enough Cajun Seasoning.
+        description: >-
+          Firstly, when using Cajun Seasoning, I prefer Tony Chachare’s, or
+          'Tony's' as this is a household staple in New Orleans. As a general
+          rule, if using full sodium beans, use less Tony's as it tends to be
+          full of salt. Consider the spice level that you can handle and put in
+          slightly less than that so that you can add more Tony's on top of your
+          dish when serving.
+
+
+          Once you add the beans, taste test to see if more Tony's is warranted.
+
+
+          Don't skimp on the Tony's.
+  - title: Time for broth and beans.
+    description: >-
+      Pour in a splash of vegetable broth, then add all the beans. Then fill
+      with more vegetable broth until slightly more liquidy than you want your
+      final product. Simmer the beans for at least alf an hour while stirring
+      occasionally. Add more spices or vegetable broth, as needed. 
+
+
+      As the beans cook and simmer, use a wooden spoon to smash them against the side of the pot, especially if substituting regular beans rather than the can of creole red beans.
+    ingredients_used:
+      - amount: "1-2 "
+        unit: "cups "
+        ingredient: vegetable broth
+      - amount: "1 "
+        unit: can
+        ingredient: Blue Runner Creole Red Beans
+      - amount: "2 "
+        unit: "cans "
+        ingredient: Low Sodium Kidney Beans
+  - title: Serve!
+    description: In bowls, add spoonful of rice, top with beans, and add a sprinkle
+      of green onions (to everyone's bowl but mine). Serve and don't forget to
+      put the Tony's and Jamajang on the table to add spice. Enjoy!
+inspired_by: "[Blue Runner Shortcut Redbeans and
+  Rice](https://www.deepsouthdish.com/2009/10/shortcut-red-beans-rice.html)"
 date: 2021-09-29T04:42:39.101Z
 ---
