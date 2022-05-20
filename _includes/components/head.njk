@@ -16,10 +16,12 @@
   <script async src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
   {% set css %}
+    {% include "assets/css/fonts.css" %}
     {% include "assets/css/root.css" %}
     {% include "assets/css/style.css" %}
     {% include "assets/css/utils.css" %}
     {% include "assets/css/components.css" %}
+    {% include "assets/css/home.css" %}
     {% include "assets/css/post.css" %}
     {% include "assets/css/responsive.css" %}
     {% include "assets/css/algolia.css" %}
@@ -27,8 +29,9 @@
   <style>{{ css | cssmin | safe }}</style>
   {% set js %}
     {% include "assets/js/inline.js" %}
+    {% include "assets/js/squiggle.js" %}
   {% endset %}
-  <script>{{ js | jsmin | safe }}</script>
+  <script type="module">{{ js | jsmin | safe }}</script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js"></script>
 <script type="text/javascript">
   algoliasearchNetlify({

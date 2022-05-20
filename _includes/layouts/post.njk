@@ -3,76 +3,65 @@ layout: layouts/base.njk
 section: post
 ---
 
-<div class="[ wrapper ] [ flow ]">
-  <article>
-    <section class="recipe-intro">
-    <p>
-    {% set categoryUrl %}/categories/{{ category }}/{% endset %}
-    <a class="category" href="{{ categoryUrl | url }}" rel="category">{{ category }}</a>
-    <p>
-      <h1 class="recipe-name"> {{ title }}</h1>
-      <p class="tagline"> {{ tagline }} </p>
-        {% if tags %}
-          <ul class="tag-list" role="list">
+<article>
+
+  <section class="recipe-intro">
+    <div class="wide-wrapper flow">
+      <h1 class="recipe-name">{{ title }}</h1>
+      <h3 class="tagline">{{ tagline }}</h3>
+      {% if tags %}
+        <ul class="tag-list" role="list">
           {% for tag in tags %}
             {%- if tag != "post" -%}
               <li>
-              {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-              <a class="tag smaller-text" href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
+                {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+                <a class="tag smaller-text special-a" href="{{ tagUrl | url }}" rel="tag">#{{ tag }}</a>
               </li>
             {%- endif -%}
           {% endfor %}
-          </ul>
-        {% endif %}
+        </ul>
+      {% endif %}
     </section>
 
-    <section class="featured-img">
-      <img src="{{ featured_image}}">
-    </section>
-
-  <section class="recipe-about flow">
-    <div class="reasons-why">
-      <h2>WHY WE LOVE IT</h2>
-      <ul>
-        {% for reason in love_list %}
-          <li>
-            {{ reason.love_reason }}
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
-
-{% if story.length %}
-    <div class="recipe-commentary flow">
-      {{ story  | markdownify | safe  }}
-    </div>
-          {% endif %}
-
-    <div class="recipe-facts">
-      <div class="stats info-box">
-        <div class="stats-time">
-          <span class="label">
-            <p class="smaller-text">Active:</p>
-          </span>
-          <span class="data">
-            <h3>{{ active_time }}</h3>
-          </span>
-        </div>
+    <section class="recipe-featured">
+      <div class="featured-img medium-wrapper">
+        <img src="{{ featured_image}}">
       </div>
-      <div class="stats info-box">
-        <div class="stats-time">
-          <span class="label">
-            <p class="smaller-text">Total:</p>
+    </section>
+
+    <section class="recipe-about">
+      <div class="narrow-wrapper">
+        {% if story.length %}
+          <div class="recipe-commentary flow">
+            {{ story  | markdownify | safe  }}
+            </div>
+        {% endif %}
+
+      <div class="recipe-facts">
+        <div class="stats info-box">
+          <div class="stats-active">
+            <span class="label">
+              <p>Active Time:</p>
             </span>
-    <span class="data">
-      <h3>{{ total_time }}</h3>
-    </span>
-  </div>
-  </div>
+            <span class="data">
+              <h3>{{ active_time }}</h3>
+            </span>
+          </div>
+        </div>
+        <div class="stats info-box">
+          <div class="stats-time">
+            <span class="label">
+              <p>Total Time:</p>
+            </span>
+            <span class="data">
+              <h3>{{ total_time }}</h3>
+            </span>
+          </div>
+        </div>
   <div class="stats info-box">
     <div class="stats-yield">
     <span class="label">
-      <p class="smaller-text">Yield:</p>
+      <p>Yield:</p>
     </span>
     <span class="data">
       <h3>{{ yield }}</h3>
@@ -80,26 +69,28 @@ section: post
     </div>
   </div>
 </div>
-
+</div>
 </section>
 
 <section class="recipe-ingredients flow">
-
-<h2 class="section-headline">Ingredients</h2>
-
-{% for groups in ingredients_list %}
-  <p><strong> {% if groups.group_name != "Ingredient List" %} {{ groups.group_name }} {% endif %}</strong></p>
-<ul>
-  {% for items in groups.ingredient %}
-  <li>
-    {{ items.amount }} {{ items.unit }} {{ items.ingredient }}
-  </li>
-  {% endfor %}
-</ul>
-{% endfor %}
+  <div class="narrow-wrapper flow">
+    <h2>Ingredients</h2>
+      {% for groups in ingredients_list %}
+      <div class="recipe-component flow">
+      <h4 class="highlight"> {% if groups.group_name != "Ingredient List" %} {{ groups.group_name }} {% endif %}</h4>
+      <ul>
+        {% for items in groups.ingredient %}
+          <li>
+            <span class="quant">{{ items.amount }}</span> <span class="unit">{{ items.unit }}</span> <span class="desc">{{ items.ingredient }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+      </div>
+      {% endfor %}
 
 {% if special_equipment.length %}
-<p><strong>Special equipment you'll need 🔪🍳:</strong></p>
+<div class="special-equipment flow">
+<h4 class="highlight">Special equipment you'll need 🔪🍳:</strong></h4>
 <ul>
   {% for items in special_equipment %}
   <li>
@@ -107,15 +98,14 @@ section: post
   </li>
   {% endfor %}
 </ul>
+</div>
 {% endif %}
 
 </section>
 
-<section class="recipe-instructions flow">
-
-<h2 class="section-headline">Instructions</h2>
-
-<ol role="list" class="instructions-list flow">
+<section class="recipe-instructions">
+  <div class="narrow-wrapper flow">
+  <ol role="list" class="instructions-list flow">
   {% for steps in instructions %}
     <li>
       <div class="single-instruction flow">
@@ -125,7 +115,7 @@ section: post
       <ul class="step-needed">
         {% for items in steps.ingredients_used %}
           <li>
-            {{ items.amount }} {{ items.unit }} {{ items.ingredient }}
+            <span class="quant">{{ items.amount }}</span> <span class="unit">{{ items.unit }}</span> <span class="desc">{{ items.ingredient }}</span>
           </li>
         {% endfor %}
           </ul>
@@ -175,16 +165,16 @@ section: post
   <div class="get-some flow">
     <h3 class="step-title">Get Some!</h3>
     <p class="step-text">You just made a recipe! I'm so proud of you! It's time to honor your dilligence and perserverance by consuming the fruits (or vegetables, et al.) of your labor.</p>
-    <p><em>Oh you made a dessert to share with friends at a dinner party? Take a big bite anyway!<em></p>
+    <p><em>What's that? You made a dessert to share with friends at a dinner party? Take a big bite anyway!<em></p>
     </div>
   </li>
 </ol>
-
+</div>
 </section>
 
   {% if other_notes.length or inspired_by.length %}
-<section class="recipe-footer flow sand-bg">
-  <div class="recipe-notes flow">
+<section class="recipe-footer flow">
+  <div class="narrow-wrapper flow">
     <h3 class="step-title">More Recipe Notes</h3>
       <ul class="step-text">
         {% for items in other_notes %}
@@ -194,7 +184,7 @@ section: post
         {% endfor %}
         <li>
         <div class="flow inspired-by">
-          <p class="font-mono upper strong deepsea">This recipe was inspired by:</p>
+          <p class="strong">This recipe was inspired by:</p>
           &nbsp;{{ inspired_by | markdownify | safe }}
     </li>
       </ul>
@@ -203,5 +193,3 @@ section: post
 </section>
 
 </article>
-
-</div>

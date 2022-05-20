@@ -11,6 +11,7 @@
   align-items: start !important;
   line-height: var(--ratio) !important;
   font-size: var(--s0) !important;
+  background-color: var(--color-light) !important;
 }
 
 .aa-DetachedSearchButtonPlaceholder {
@@ -21,11 +22,76 @@
   display: none !important;
 }
 
+/* BRAND STICKER */
+
+.sticker {
+  text-transform: uppercase;
+  font-size: 1.09rem;
+  color: #0D0D0D;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+}
+
+.sticker {
+  width: 115px;
+  height: 115px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  transform: translate3d(-1rem, -2rem, 0);
+}
+
+.sticker img {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  z-index: 2;
+  width: 60%;
+}
+
+.sticker svg {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.sticker svg {
+  border: 2px solid black;
+  border-radius: 50%;
+  background-color: white
+}
+
+.sticker svg {
+  -webkit-animation: rotateOnZ 20s infinite linear;
+          animation: rotateOnZ 20s infinite linear;
+}
+
+@-webkit-keyframes rotateOnZ {
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+@keyframes rotateOnZ {
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+@media (min-width: 767px)
+{
+  .sticker {
+      width: 150px;
+  height: 150px;
+  }
+}
+
+
 /* RECIPE LIST */
 
 .recipe-list {
     padding: 0px;
-    --min: 20ch;
+    --min: 275px;
     --gap: 1rem;
     display: grid;
     grid-gap: 2rem 1.5rem;
@@ -37,15 +103,16 @@
 }
 
 .recipe-card {
-    --img-ratio: 3/2;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0.25rem 0.25rem 0 0 var(--bw-darkest);
-    border-radius: 0.5rem;
-    background-color: var(--bw-lightest);
-    border: 2px solid var(--bw-darkest);
-    height: 100%;
-    position: relative;
+  --img-ratio: 3/2;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #000;
+  border-radius: 30px;
+  background-color: #fffef6;
+  box-shadow: 0 8px 0 0 var(--color-dark);
+  background-color: var(--color-light);
+  height: 100%;
+  position: relative;
 }
 
 .recipe-card > img {
@@ -65,13 +132,13 @@
 }
 
 .recipe-card > img:first-child {
-  border-radius: 0.3rem 0.3rem 0 0;
+  border-radius: 28px 28px 0 0;
 }
 
 .recipe-card:hover {
-    transform: translateY(-.5rem) scale(1.01);
-    box-shadow: 0.25rem 0.25rem 0 0 var(--color-coral);
-    transition: transform 350ms cubic-bezier(0,.26,.13,1.55),box-shadow .2s;
+  transform: translateY(0.5rem);
+  transition: transform 350ms cubic-bezier(0, 0.26, 0.13, 1.55), box-shadow 0.2s;
+  box-shadow: 0 0 0 0 var(--color-dark);
 }
 
 .recipe-info {
@@ -90,4 +157,109 @@
     left: 0;
     background: 0 0;
     cursor: pointer;
+}
+
+/* ARROWS MARQUEE */
+
+.arrows-marquee {
+  //max-width: 100px;
+}
+
+svg.arrows-marquee path {
+  fill: var(--color-dark);
+}
+
+.arrows-marquee .arrows {
+          animation: point 2.5s infinite linear;
+}
+
+@keyframes point {
+  from {
+    opacity: 1;
+  }
+  25% {
+    opacity: .5;
+  }
+ 50% {
+    opacity: 0.1;
+  }
+ 75% {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.arrows-marquee .arrows-1 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.arrows-marquee .arrows-2 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+.arrows-marquee .arrows-3 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.arrows-marquee .arrows-4 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.arrows-marquee .arrows-5 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.arrows-marquee .arrows-6 {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.arrows-marquee .arrows-7 {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.arrows-marquee .arrows-8 {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+.arrows-marquee .arrows-9 {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+.arrows-marquee .arrows-10 {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+.arrows-marquee .arrows-11 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.arrows-marquee .arrows-12 {
+  -webkit-animation-delay: 1.1s;
+          animation-delay: 1.1s;
+}
+.arrows-marquee .arrows-13 {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+.arrows-marquee .arrows-14 {
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+}
+.arrows-marquee .arrows-15 {
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+}
+.arrows-marquee .arrows-16 {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+.arrows-marquee .arrows-17 {
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+.arrows-marquee .arrows-18 {
+  -webkit-animation-delay: 1.7s;
+          animation-delay: 1.7s;
 }

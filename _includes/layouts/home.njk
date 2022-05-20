@@ -3,15 +3,51 @@ layout: layouts/base.njk
 section: home
 ---
 
-<div class="[ wrapper ] [ flow ]">
-  <section class="cookbook-intro">
-    <h1>Look at all these recipes... yummmm!</h1>
-    {{ layoutContent | safe }}
+  <section class="home-welcome">
+    <div class="[ wide-wrapper ]">
+      <div class="welcome-grid">
+        <div class="welcome-text flow">
+          <h1 class="font-fancy font-outline">Let's Make A <span class="giantsorange">Recipe!</span></h1>
+          <div class="suggest">
+          <h3>Maybe this one?</h3>
+          {% include "static/img/arrows-marquee.svg" %}
+          </div>
+        </div>
+        <figure style="--welcome-image: url('https://images.unsplash.com/photo-1484723091739-30a097e8f929');">
+        </figure>
+        {% include "components/brand-sticker.njk" %}
+      </div>
+    </div>
   </section>
-  <section class="tag-filters">
-  </section>
+
+<section class="home-categories">
+<div class="[ wide-wrapper ]">
+  <div class="home-category-line font-fancy">
+    <a>Main Dishes<img src="http://peterchastagner.com/main-dish.png"></a>
+    <span>You fancy, huh</span>
+  </div>
+  <div class="home-category-line font-fancy">
+    <span>party animal</span>
+    <a><img src="http://peterchastagner.com/snack.png">snacks</a>
+  </div>
+  <div class="home-category-line font-fancy">
+    <a>Desserts<img src="http://peterchastagner.com/dessert.png"></a>
+    <span>Sweet & sexy</span>
+    </div>
+  <div class="home-category-line font-fancy">
+    <span>Pinky up sippin'</span>
+    <a><img src="http://peterchastagner.com/cocktail.png">drinks</a>
+    </div>
+    <p class="medium-wrapper">Welcome to the <strong class="highlight">Narwhal Socks Cookbook</strong>, where all your culinary fantasies become reality! I hope you're hungry because there are some very tasty recipes ahead!</p>
+    <div class="line-animation" id="get-squiggle">
+{% include "static/img/squiggle-arrow.svg" %}
+</div>
+  </div>
+</section>
+
   <section class="recipe-browse">
+<div class="[ wide-wrapper ]">
     {% set postslist = collections.post %}
     {% include "components/recipe-cards.njk" %}
+    <div>
   </section>
-</div>

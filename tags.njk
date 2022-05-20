@@ -15,7 +15,13 @@ renderData:
   metaDescription: "All posts from the Blog tagged with “{{ tag }}”"
 ---
 
-<h1>Tagged “{{ tag }}”</h1>
-
-{% set postslist = collections[tag] %}
-{% include "components/postslist.njk" %}
+<div class="[ wide-wrapper ] [ flow ]">
+  <section class="filter-page">
+    <h1>Recipes filed under <span class="safetyorange">#{{ tag }}</span>:</h1>
+    {{ layoutContent | safe }}
+  </section>
+  <section class="recipe-browse">
+    {% set postslist = collections[tag] %}
+    {% include "components/recipe-cards.njk" %}
+  </section>
+</div>

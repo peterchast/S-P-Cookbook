@@ -1,0 +1,20 @@
+<svg version="1.1"
+     xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 624.64 50" class="arrows-marquee">
+    <g>
+        <path class="arrows arrows-1" d="M49.81,25L24.81,0H0L25,25,0,50H24.81l25-25Z"/>
+        <path class="arrows arrows-2" d="M93.95,25L68.95,0h-24.81l25,25-25,25h24.81l25-25Z"/>
+        <path class="arrows arrows-3" d="M138.08,25L113.08,0h-24.81l25,25-25,25h24.81l25-25Z"/>
+        <path class="arrows arrows-4" d="M182.22,25L157.22,0h-24.81l25,25-25,25h24.81l25-25Z"/>
+        <path class="arrows arrows-5" d="M226.35,25L201.35,0h-24.81l25,25-25,25h24.81l25-25Z"/>
+        <path class="arrows arrows-6" d="M270.49,25L245.49,0h-24.81l25,25-25,25h24.81l25-25Z"/>
+        <path class="arrows arrows-7" d="M314.62,25L289.62,0h-24.81l25,25-25,25h24.81l25-25Z"/>
+        <path class="arrows arrows-8" d="M358.75,25L333.75,0h-24.81l25,25-25,25h24.81l25-25Z"/>
+        <path class="arrows arrows-9" d="M403.97,25L378.97,0h-24.81l25,25-25,25h24.81l25-25Z"/>
+        <path class="arrows arrows-10" d="M448.11,25L423.11,0h-24.81l25,25-25,25h24.81l25-25Z"/>
+        <path class="arrows arrows-11" d="M492.24,25L467.24,0h-24.81l25,25-25,25h24.81l25-25Z"/>
+        <path class="arrows arrows-12" d="M536.38,25L511.38,0h-24.81l25,25-25,25h24.81l25-25Z"/>
+        <path class="arrows arrows-13" d="M580.51,25L555.51,0h-24.81l25,25-25,25h24.81l25-25Z"/>
+        <path class="arrows arrows-14" d="M624.64,25L599.64,0h-24.81l25,25-25,25h24.81l25-25Z"/>
+    </g>
+</svg>

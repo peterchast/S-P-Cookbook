@@ -3,12 +3,10 @@ layout: layouts/base.njk
 section: category
 ---
   {% set cls = ( title | slug ) %}
-<div class="[ wrapper ] [ flow ]">
-  <section class="cookbook-intro">
-    <h1>Recipes filed under {{ title }}</h1>
+<div class="[ wide-wrapper ] [ flow ]">
+  <section class="filter-page">
+    <h1>Recipes filed under <span class="safetyorange">{{ title }}</span>:</h1>
     {{ layoutContent | safe }}
-  </section>
-  <section class="tag-filters">
   </section>
   <section class="recipe-browse">
     {% set postslist = collections.post %}

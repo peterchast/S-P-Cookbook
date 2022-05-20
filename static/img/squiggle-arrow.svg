@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 201.03 195.05" width="201" height="195">
+  <defs>
+    <style>
+      .arrow-line {
+        fill: none;
+        stroke: #ff7914;
+        stroke-linecap: round;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="arrow-line squiggle" d="M1,13.85s44.82-27.54,101-2c56.18,25.54,23,66.5,23,66.5,0,0-6.88,7.32-14.5,2-7.62-5.32-3.68-16.49,10.5-22-4.35,1.92,48.98-23.28,73,28.5,22.71,48.95-25.12,101.01-37.5,103.5" />
+    <path class="arrow-line point" d="M163.42,159.55l-7.35,30.87c-.08,.33,.15,.66,.49,.7l27.86,2.93" />
+  </g>
+</svg>
