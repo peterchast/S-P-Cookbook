@@ -27,14 +27,35 @@ RECIPE INTRO
   line-height: 0.8;
 }
 
+.tag {
+  font-size: var(--step--1);
+}
+
+.tag:hover {
+  color: var(--color-giantsorange);
+}
+
 /*
 FEATURED PHOTO
 */
 
-.recipe-featured {
+section.recipe-featured {
   display: flex;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 0;
+}
+
+.recipe-featured::before {
+    background: var(--color-yellow);
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0px 0px 50%;
+    border-bottom: solid 2px var(--color-dark);
+    z-index: -1;
 }
 
 .featured-img img {
@@ -52,110 +73,33 @@ FEATURED PHOTO
   aspect-ratio: 3/2;
 }
 
-.recipe-featured {
-  position: relative;
-  z-index: 1;
+/* RECIPE FACTS */
+
+.recipe-details>div>div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
 }
 
-.recipe-featured::before {
-    background: var(--color-yellow);
-    content: "";
-    display: block;
-    position: absolute;
-    inset: 0px 0px 50%;
-    border-bottom: solid 2px var(--color-dark);
-    z-index: -1;
-}
 
 /*
 RECIPE ABOUT
 */
 
 section.recipe-about {
-  margin-bottom: var(--space-xl) 0 0 0;
+  padding-bottom: var(--space-xl);
 }
 
 .recipe-commentary p:first-of-type::first-letter {
     float: left;
-  font-family: 'Gulfs Display SemiExpanded', sans-serif;
+    font-family: 'Gulfs Display SemiExpanded', sans-serif;
     padding: .15rem .5rem 0 .1875rem;
     font-size: 3.75rem;
-    font-weight: 700;
+    font-weight: 400;
     line-height: .84;
     text-transform: uppercase;
-}
-
-.recipe-facts {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  //margin-top: 2rem;
-  //margin-bottom: 2rem;
-  margin: var(--space-s) 0 var(--space-xl) 0;
-}
-
-.stats {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  background-color: #fff;
-}
-.stats {
-  padding: .875rem;
-  border: 1.75px solid #000;
-  border-radius: 1em;
-  background-color: #fffdf1;
-  box-shadow: 0 6px 0 0 #000;
-}
-
-.stats-yield, .stats-time, .stats-active {
-    display: grid;
-    grid-template-columns: 4rem auto;
-    grid-auto-rows: auto 1fr;
-    align-items: center;
-}
-
-.stats-active:before {
-    content: '🔨';
-    display: block;
-    grid-column: 1;
-    grid-row: 1/3;
-    height: auto;
-      font-size: 2.5rem;
-    line-height: 1.17;
-}
-
-.stats-time:before {
-    content: '⏰';
-    display: block;
-    grid-column: 1;
-    grid-row: 1/3;
-    height: auto;
-      font-size: 2.5rem;
-    line-height: 1.17;
-}
-
-.stats-yield:before {
-    content: '🥘';
-    display: block;
-    grid-column: 1;
-    grid-row: 1/3;
-    height: auto;
-      font-size: 2.5rem;
-    line-height: 1.17;
-}
-
-.stats .label {
-  grid-row: 1/2;
-  font-family: var(--font-mono);
-  text-transform: uppercase;
-  font-size: var(--size-300);
-}
-
-.stats .data {
-  grid-row: 2/3;
-  font-size: var(--size-600);
-  line-height: 0.8;
 }
 
 
@@ -164,13 +108,13 @@ INGREDIENTS
 */
 
 section.recipe-ingredients {
-  padding: var(--space-xl-2xl) 0;
+  padding: var(--space-xl) 0;
   background-color: var(--color-shade);
 }
 
 .recipe-ingredients h2 {
    font-family: 'Gulfs Display SemiExpanded', sans-serif;
-  font-size: 42px;
+  font-size: clamp(1.75rem, calc(0.19rem + 7.78vw), 2.63rem);
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
@@ -181,7 +125,7 @@ section.recipe-ingredients {
 }
 
 .recipe-component, .special-equipment {
-  --flow-space: var(--space-m);
+  --flow-space: var(--space-l);
 }
 
 .recipe-component *, .special-equipment * {
@@ -200,7 +144,6 @@ RECIPE INSTRUCTIONS
 
 section.recipe-instructions {
     padding-top: var(--space-xl-2xl);
-    --flow-space: var(--s3);
   }
 
 .instructions-list {
@@ -231,16 +174,20 @@ ol.instructions-list > li:before {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: var(--size-900);
-  height: var(--size-900);
+  width: var(--space-l-xl);
+  height: var(--space-l-xl);
   border: 2px solid var(--color-dark);
   border-radius: 50%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: var(--size-500);
-  font-size: var(--size-700);
+  margin-bottom: var(--space-s);
+  font-size: var(--step-1);
   font-family: var(--font-fancy);
   box-shadow: 0 6px 0 var(--color-dark);
+}
+
+.single-instruction {
+    --flow-space: var(--space-s);
 }
 
 .step-title {
@@ -248,21 +195,19 @@ ol.instructions-list > li:before {
 }
 
 .step-needed {
-  padding: var(--s0) var(--s0) 0 var(--s0);
-  margin: var(--s0) 0 0 0;
+  padding: var(--space-s) var(--space-s) 0 var(--space-s);
+  margin: var(--space-s) 0 0 0;
   border-top: 1px solid #edecea;
 }
 
 .step-text {
-    padding-top: var(--s0);
-    margin-top: var(--s0);
     border-top: 1px solid #edecea;
 }
 
 .step-photos {
   display: grid;
   grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
-  gap: var(--s-2);
+  gap: var(--space-2xs);
   --img-ratio: 3/2;
 }
 
@@ -284,20 +229,20 @@ ol.instructions-list > li:before {
 
 .step-tips {
   display: inline-flex;
-  background: #fbf9ee;
-  margin-top: 28px;
+  background: var(--color-shade);
+  margin-top: var(--space-m);
   flex-wrap: wrap;
 }
 
 div:has(.tip-inner) {
-  background: black;
+  background: var(--color-dark);
 }
 
 .tip-activate {
   display: flex;
   align-items: center;
-  color: #1b4d7a;
-  padding: 1rem;
+  color: var(--color-dark);
+  padding: var(--space-xs);
   margin: 0;
 }
 
@@ -306,6 +251,7 @@ div:has(.tip-inner) {
     height: 1.5rem;
     fill: none;
     transform: rotate(-90deg);
+    stroke: var(--color-dark);
 }
 
 .tip-inner {
@@ -328,7 +274,7 @@ input[id^="toggle_"] {
 }
 
 .get-some {
-  --flow-space: var(--s0);
+  --flow-space: var(--space-s);
 }
 
 /*
@@ -345,7 +291,7 @@ RECIPE FOOTER
 }
 
 .recipe-footer  ul:not([role=list])>li {
-    margin-bottom: var(--s1);
+    margin-bottom: var(--space-m);
 }
 
 .recipe-footer .step-text {
@@ -353,6 +299,6 @@ RECIPE FOOTER
 }
 
 .inspired-by p {
-  --flow-space: var(--s-2);
+  --flow-space: var(--space-2xs);
   display: inline;
 }

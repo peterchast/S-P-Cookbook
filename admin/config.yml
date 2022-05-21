@@ -33,12 +33,6 @@ collections:
           - { label: "Drinks", value: "drinks" }
       - { label: "Tags", name: "tags", widget: "list", default: ["recipe"] }
       - { label: Featured Image, name: featured_image, widget: image}
-      - label: "Why We Love It"
-        name:  "love_list"
-        widget: "list"
-        summary: '{{fields.love_reason}}'
-        fields:
-          - {label: Reason, name: love_reason, widget: string}
       - { label: "Recipe Story", name: "story", widget: "markdown", required: false }
       - label: "Ingredients List"
         name: "ingredients_list"

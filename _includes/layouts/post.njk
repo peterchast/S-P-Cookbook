@@ -8,14 +8,14 @@ section: post
   <section class="recipe-intro">
     <div class="wide-wrapper flow">
       <h1 class="recipe-name">{{ title }}</h1>
-      <h3 class="tagline">{{ tagline }}</h3>
+      <h3 class="tagline">{{ tagline | markdownify | safe }}</h3>
       {% if tags %}
         <ul class="tag-list" role="list">
           {% for tag in tags %}
             {%- if tag != "post" -%}
               <li>
                 {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-                <a class="tag smaller-text special-a" href="{{ tagUrl | url }}" rel="tag">#{{ tag }}</a>
+                <a class="tag special-a" href="{{ tagUrl | url }}" rel="tag">#{{ tag }}</a>
               </li>
             {%- endif -%}
           {% endfor %}
@@ -24,53 +24,34 @@ section: post
     </section>
 
     <section class="recipe-featured">
-      <div class="featured-img medium-wrapper">
+    <div class="medium-wrapper featured-img">
         <img src="{{ featured_image}}">
       </div>
     </section>
 
-    <section class="recipe-about">
-      <div class="narrow-wrapper">
-        {% if story.length %}
-          <div class="recipe-commentary flow">
-            {{ story  | markdownify | safe  }}
-            </div>
-        {% endif %}
-
-      <div class="recipe-facts">
-        <div class="stats info-box">
-          <div class="stats-active">
-            <span class="label">
-              <p>Active Time:</p>
-            </span>
-            <span class="data">
-              <h3>{{ active_time }}</h3>
-            </span>
-          </div>
-        </div>
-        <div class="stats info-box">
-          <div class="stats-time">
-            <span class="label">
-              <p>Total Time:</p>
-            </span>
-            <span class="data">
-              <h3>{{ total_time }}</h3>
-            </span>
-          </div>
-        </div>
-  <div class="stats info-box">
-    <div class="stats-yield">
-    <span class="label">
-      <p>Yield:</p>
-    </span>
-    <span class="data">
-      <h3>{{ yield }}</h3>
-    </span>
+  <section class="recipe-details">
+    <div class="medium-wrapper">
+      <div class="recipe-deets">
+        <h4>🔨 {{ active_time }}</h4>
+        <h4 class="safetyorange">/</h4>
+        <h4>⏰ {{ total_time }}</h4>
+        <h4 class="safetyorange">/</h4>
+        <h4>🥘 {{ yield }}</h4>
+      </div>
     </div>
-  </div>
-</div>
-</div>
-</section>
+  </section>
+
+        {% if story.length %}
+  <section class="recipe-about">
+    <div class="narrow-wrapper">
+
+        <div class="recipe-commentary flow">
+          {{ story  | markdownify | safe  }}
+         </div>
+
+    </div>
+  </section>
+         {% endif %}
 
 <section class="recipe-ingredients flow">
   <div class="narrow-wrapper flow">
@@ -121,7 +102,7 @@ section: post
           </ul>
         {% endif %}
 
-      <p class="step-text">{{ steps.description }}</p>
+      <p class="step-text">{{ steps.description | markdownify | safe }}</p>
 
       {% if steps.instruction_photo %}
       <div class="step-photos">
@@ -136,9 +117,9 @@ section: post
         <label for="toggle_{{ loop.index }}" class="show-tip"><div class="tip-activate">
           <p class="smaller-text">Just The Tip</p>
           <svg class="tip-arrow" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="8" cy="8" r="8" fill="inherit"></circle>
-  <path d="M10.666 11.4075L4.74009 11.4075L4.74009 5.48157" stroke="#1B4D7A"></path>
-  <path d="M4.73958 11.4076L11.4062 4.74097" stroke="#1B4D7A"></path>
+  <circle cx="8" cy="8" r="8" fill="inherit" stroke="none"></circle>
+  <path d="M10.666 11.4075L4.74009 11.4075L4.74009 5.48157" ></path>
+  <path d="M4.73958 11.4076L11.4062 4.74097" ></path>
               </svg>
             </div>
           </label>
@@ -164,7 +145,7 @@ section: post
   <li>
   <div class="get-some flow">
     <h3 class="step-title">Get Some!</h3>
-    <p class="step-text">You just made a recipe! I'm so proud of you! It's time to honor your dilligence and perserverance by consuming the fruits (or vegetables, et al.) of your labor.</p>
+    <p class="step-text"></p><p>You just made a recipe! I'm so proud of you! It's time to honor your dilligence and perserverance by consuming the fruits (or vegetables, et al.) of your labor.</p>
     <p><em>What's that? You made a dessert to share with friends at a dinner party? Take a big bite anyway!<em></p>
     </div>
   </li>
@@ -176,7 +157,8 @@ section: post
 <section class="recipe-footer flow">
   <div class="narrow-wrapper flow">
     <h3 class="step-title">More Recipe Notes</h3>
-      <ul class="step-text">
+      <p class="step-text"></p>
+      <ul>
         {% for items in other_notes %}
         <li>
           {{ items.note }}
@@ -184,7 +166,7 @@ section: post
         {% endfor %}
         <li>
         <div class="flow inspired-by">
-          <p class="strong">This recipe was inspired by:</p>
+          <p class="strong">Inspiration provided by:</p>
           &nbsp;{{ inspired_by | markdownify | safe }}
     </li>
       </ul>

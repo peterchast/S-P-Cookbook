@@ -1,8 +1,4 @@
-/* GLOBAL CSS */
-
-.tag-filters {
-  display: none;
-}
+/* GLOBAL BOXES */
 
 html, body {
   height: 100%;
@@ -16,13 +12,31 @@ body {
   font-size: var(--step-0);
 }
 
+.site-wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
 main {
   padding-bottom: var(--space-3xl);
+  flex: 1 0 auto;
 }
+
+section {
+  padding: var(--space-m) 0;
+}
+
+section.filter-page {
+  padding: var(--space-xl) 0 0 0;
+}
+
+/* GLOBAL TYPOGRAPHY */
 
 a {
   cursor: pointer;
   color: inherit;
+  transition-duration: 100ms;
 }
 
 a:visited {
@@ -31,16 +45,6 @@ a:visited {
 
 a:not(.special-a):hover {
   color: var(--color-yellow);
-}
-
-.site-wrap {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-}
-
-main {
-  flex: 1 0 auto;
 }
 
 h1,
@@ -53,32 +57,84 @@ h4 {
 }
 
 h1 {
-  font-size: clamp(var(--s2), 5vw , var(--s3));
+  font-size: var(--step-4);
 }
 
 h2 {
-  font-size: var(--s1);
+  font-size: var(--step-3);
 }
 
 h3 {
-  font-size: var(--s1);
+  font-size: var(--step-2);
 }
 
 h4 {
-  font-size: var(--s0);
+  font-size: var(--step-1);
 }
 
-section:not(.filter-page) {
-  padding: var(--space-m) 0;
+/* GLOBAL ELEMENTS */
+
+ul, ol {
+  padding-inline-start: 0px;
+  margin: 0;
 }
 
-.filter-page h1 {
-  padding: var(--space-m) 0;
+ul[role="list"], ol[role="list"] {
+    padding: 0px;
 }
 
-.tag {
-  //padding: .0625em .25em ;
-  //font-family: var(--font-mono);
+ul:not([role="list"]) {
+  list-style: none;
+}
+
+ul:not([role="list"])>li {
+    position: relative;
+    padding-left: 1.4rem;
+    margin-top: 0;
+    margin-bottom: var(--space-xs);
+    line-height: var(--ratio);
+}
+
+ol {
+    position: relative;
+    padding-left: 1.4rem;
+    margin-top: 0;
+    line-height: var(--ratio);
+}
+
+ol>li {
+  padding: 0 0 10px 30px;
+  margin: 0 0 10px;
+  position: relative;
+}
+
+ul:not([role="list"])>li:before {
+  top: 0.813rem;
+  content: "";
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.063rem;
+  background: var(--color-giantsorange);
+  margin-left: -1.875rem;
+  position: absolute;
+}
+
+.skip-link:not(:focus), .visually-hidden, :not(:hover)>.heading-permalink {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+.skip-link {
+    position: absolute;
+    top: clamp(1.09rem,1rem + .47vw,1.33rem);
+    left: clamp(1.09rem,1rem + .47vw,1.33rem);
 }
 
 /* HEADER / FOOTER CSS */
@@ -97,7 +153,7 @@ header {
 }
 
 .logo {
-  font-size: var(--s0);
+  font-size: var(--step-0);
   font-weight: 600;
 }
 
@@ -112,8 +168,7 @@ nav {
 nav a {
   color: var(--color-dark);
   text-transform: capitalize;
-  //font-weight: 600;
-    font-size: var(--smedium);
+  font-size: var(--step--1);
 }
 
 nav > ul {
@@ -129,8 +184,18 @@ header a, footer a {
   text-decoration: none;
 }
 
-header a:not(.nvr-deco):hover, footer a:not(.nvr-deco):hover {
-    //text-decoration: underline;
+footer {
+  background: var(--color-yellow);
+  border-top: 2px solid var(--color-dark);
+  --flow-space: var(--space-2xs);
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+footer .slide:before  {
+  background: var(--color-safetyorange) !important;
 }
 
 .inner-footer {
@@ -140,20 +205,5 @@ header a:not(.nvr-deco):hover, footer a:not(.nvr-deco):hover {
   padding: var(--space-s) 0px;
   flex-wrap: wrap;
   text-align: center;
-  font-size: var(--smedium);
-}
-
-footer {
-  background: var(--color-yellow);
-  border-top: 2px solid var(--color-dark);
-  --flow-space: var(--space-2xs);
-}
-
-
-footer {
-  flex-shrink: 0;
-}
-
-footer .slide:before  {
-  background: var(--color-safetyorange) !important;
+  font-size: var(--step--1);
 }
