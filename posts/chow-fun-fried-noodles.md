@@ -10,11 +10,12 @@ tags:
   - asian
   - wok
 featured_image: /static/img/chow-fun.webp
-story: Eat this 15-minute meal for breakfast, lunch, and dinner! It's easy and
-  foolproof. Also, don't bother reading these instructions. It's best to pick up
-  the technique by [watching the pros do it in this
-  video](https://www.youtube.com/watch?v=GbauWTD1OXk). Gordon Ramsay does a
-  [pretty good version](https://www.youtube.com/watch?v=xhsN_36OW4w) too.
+story: >-
+  Eat this 15-minute meal for breakfast, lunch, and dinner! It's easy, it's
+  foolproof and you can use pretty much any produce you have on hand. 
+
+
+  Also, don't bother reading these instructions. It's best to pick up the technique by [watching the pros do it in this video](https://www.youtube.com/watch?v=GbauWTD1OXk). Gordon Ramsay does a [pretty good version](https://www.youtube.com/watch?v=xhsN_36OW4w) too.
 ingredients_list:
   - group_name: Ingredient List
     ingredient:
