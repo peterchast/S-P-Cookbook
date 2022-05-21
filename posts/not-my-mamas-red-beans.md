@@ -72,7 +72,7 @@ ingredients_list:
 special_equipment: []
 active_time: 20 mins
 total_time: 1 hr
-yield: Feeds 4 people
+yield: Feeds 4
 instructions:
   - title: "Ask Peter to start the rice. "
     description: We use an Instant pot (and in case Scotia has to do it, it's a 1:1
