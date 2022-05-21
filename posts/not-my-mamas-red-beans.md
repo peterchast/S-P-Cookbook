@@ -34,6 +34,9 @@ story: >-
   2. Meat is essential to red beans and rice. Layer upon layer of flavor means that multiple types of meat are key.
 
   3. That's pretty much it, but this list needed a third thing, so let's say she wouldn't ever use any color pepper but green and I frequently do!
+
+
+  I even insisted that my night be Mondays to match the New Orleans tradition of slow cooking beans all day on laundry day.
 ingredients_list:
   - group_name: Ingredient List
     ingredient:
