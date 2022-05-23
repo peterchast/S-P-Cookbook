@@ -1,7 +1,7 @@
 ---
-title: "Pisco Sour: Probably The Most Important Discovery of My Life"
-tagline: All it took was one quick sip for the Pisco Sour to become Peter's
-  favorite cocktail.
+title: Pisco Sour
+tagline: "Tart, silky and simple: 3 reasons why this is one of the best
+  cocktails you can possibly make.  "
 easy_slug: pisco-sour
 category: drinks
 tags:
@@ -11,12 +11,14 @@ tags:
   - lime
   - egg-whites
 featured_image: /static/img/pisco-sour.jpg
-love_list:
-  - love_reason: Pisco Sours are the best cocktails possible. So naturally we need
-      an easy reference guide for making them.
-  - love_reason: Tried a bunch of variations, the simple 4/2/1 ratio is simply the
-      best so far.
-story: ""
+story: >-
+  All it took was one quick sip for the Pisco Sour to become my (Peter's)
+  favorite cocktail. Play with the amount of simple syrup to find your favorite
+  sweet spot. I generally like it on the tart side, but it's pretty good
+  anywhere between 1/2 oz. - 1 oz. 
+
+
+  Also important to note: Serious Eats has the Pisco at 3 ounces 😉🍸🍸 (if you try it, you might want to bump up the simple syrup to 3/4 oz).
 ingredients_list:
   - ingredients_list:
       - amount: "2"
@@ -70,12 +72,14 @@ instructions:
   - title: Strain & garnish
     description: Strain the drink into your cocktail glass or red plastic cup. Watch
       the egg white foam collect at the top. Garnish with bitters on the foam.
+love_list:
+  - love_reason: Pisco Sours are the best cocktails possible. So naturally we need
+      an easy reference guide for making them.
+  - love_reason: Tried a bunch of variations, the simple 4/2/1 ratio is simply the
+      best so far.
 slug: pisco-sour
 yield: 1 cocktail
-other_notes:
-  - note: "Play with the amount of simple syrup to find your favorite sweet spot.
-      It's pretty good anywhere between 1/2 oz. - 1 oz. "
-  - note: Serious Eats has the Pisco at 3 ounces 😉🍸🍸
+other_notes: []
 inspired_by: Grabbed this recipe from [a couple
   cooks](https://www.acouplecooks.com/pisco-sour/). Not unique, really, in the
   grand scheme of things.
