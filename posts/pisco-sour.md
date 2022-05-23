@@ -1,6 +1,6 @@
 ---
-title: Pisco Sour
-tagline: "Tart, silky and simple: 3 reasons why this is one of the best
+title: The Indomitable Pisco Sour
+tagline: "Tart, silky, and simple: 3 reasons why this is one of the best
   cocktails you can possibly make.  "
 easy_slug: pisco-sour
 category: drinks
