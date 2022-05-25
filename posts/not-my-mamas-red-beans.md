@@ -13,7 +13,7 @@ tags:
   - cozy
   - southern
   - Louisiana
-featured_image: https://static01.nyt.com/images/2020/01/22/dining/sd-vegan-red-beans-and-rice/sd-vegan-red-beans-and-rice-articleLarge.jpg
+featured_image: /static/img/posts/veg-red-beans.webp
 love_list:
   - love_reason: This is an easy go-to that is great for any day, but especially Monday.
 story: >-
@@ -138,7 +138,7 @@ instructions:
       Pour in a splash of vegetable broth, then add all the beans. Then fill
       with more vegetable broth until slightly more liquidy than you want your
       final product. Simmer the beans for at least alf an hour while stirring
-      occasionally. Add more spices or vegetable broth, as needed. 
+      occasionally. Add more spices or vegetable broth, as needed.
 
 
       As the beans cook and simmer, use a wooden spoon to smash them against the side of the pot, especially if substituting regular beans rather than the can of creole red beans.

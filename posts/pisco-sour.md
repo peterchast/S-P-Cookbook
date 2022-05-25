@@ -10,12 +10,12 @@ tags:
   - sour
   - lime
   - egg-whites
-featured_image: /static/img/pisco-sour.jpg
+featured_image: /static/img/posts/pisco-sour.jpg
 story: >-
   All it took was one quick sip for the Pisco Sour to become my (Peter's)
   favorite cocktail. Play with the amount of simple syrup to find your favorite
   sweet spot. I generally like it on the tart side, but it's pretty good
-  anywhere between 1/2 oz. - 1 oz. 
+  anywhere between 1/2 oz. - 1 oz.
 
 
   Also important to note: Serious Eats has the Pisco at 3 ounces 😉🍸🍸 (if you try it, you might want to bump up the simple syrup to 3/4 oz).

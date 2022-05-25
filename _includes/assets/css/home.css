@@ -178,7 +178,7 @@ body.header-not-at-top .point {
       grid-row: 1 / 2;
   }
 
-  .welcome-grid figure {
+  .welcome-grid a {
       grid-column: 2 / 3;
     grid-row: 1 / 2;
   }

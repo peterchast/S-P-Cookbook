@@ -9,7 +9,7 @@ tags:
   - chowfun
   - asian
   - wok
-featured_image: /static/img/chow-fun.webp
+featured_image: /static/img/posts/chow-fun.webp
 story: >-
   Eat this 15-minute meal for breakfast, lunch, and dinner! It's easy, it's
   foolproof and you can use pretty much any produce you have on hand. Don't
@@ -69,7 +69,7 @@ instructions:
   - title: Prepare the pan
     description: >-
       Start heating your pan on the burner. It's easiest to use something
-      non-stick or well-seasoned carbon steel. Woks offer optimum flipability. 
+      non-stick or well-seasoned carbon steel. Woks offer optimum flipability.
 
 
       Add a few tablespoons of cooking oil and wait for it to shimmer.
