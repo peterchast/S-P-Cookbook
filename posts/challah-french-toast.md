@@ -9,7 +9,7 @@ tags:
   - cinnamon
   - challah
   - sweet&savory
-featured_image: /static/img/challah-french-toast.webp
+featured_image: /static/img/posts/challah-french-toast.webp
 story: >-
   This recipe was optimized for challah cooked in my 1 lb loaf pan. My trick is
   to overproof the dough until it's nearly mushrooming over the rim, and then
@@ -58,7 +58,7 @@ instructions:
   - description: >-
       Place the milk or cream, eggs, maple syrup, vanilla, and cinnamon in a
       mixing bowl and whisk until fully combined (no streaks of egg remaining).
-      Pour into a 9x13-inch baking dish. 
+      Pour into a 9x13-inch baking dish.
 
 
       You can also dump all the ingredients straight into the baking dish, but it'll be more difficult to get a thorough mixing.
@@ -71,7 +71,7 @@ instructions:
   - description: >-
       Melt 2 tablespoons of the butter in a large nonstick skillet over medium
       heat. When the foaming subsides and the butter is sizzling but not brown,
-      add 4 soaked challah slices. 
+      add 4 soaked challah slices.
 
 
       Cook until the bottoms are golden-brown and crispy, 3 to 4 minutes. Flip and cook until the second side is browned, about 3 minutes more. Add remaining 1 tablespoon butter to the pan in between batches, swirling as it melts to ensure it doesn’t burn. Serve warm with more maple syrup.

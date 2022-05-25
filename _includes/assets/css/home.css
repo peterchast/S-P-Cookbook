@@ -14,7 +14,7 @@ section.home-welcome, section.home-categories, section.recipe-browse {
 }
 
 .welcome-text h1 {
-  font-size: clamp(3.38rem, calc(-0.73rem + 20.54vw), 9.13rem);
+  font-size: clamp(3.38rem, calc(-0.47rem + 19.24vw), 8.75rem);
   text-transform: uppercase;
   line-height: 0.95;
 }
@@ -34,9 +34,12 @@ section.home-welcome, section.home-categories, section.recipe-browse {
   grid-column: 1 / 2;
 }
 
-.welcome-grid figure {
+.welcome-grid a {
   grid-row: 1 / 2;
   grid-column: 1 / 2;
+}
+
+.welcome-grid figure {
   background-image: var(--welcome-image);
   background-size: cover;
   background-position: center 20%;
@@ -44,6 +47,7 @@ section.home-welcome, section.home-categories, section.recipe-browse {
   border: 2px solid #000;
   box-shadow: 0 8px 0 0 #000;
   padding-bottom: 66%;
+  height: 100%;
 }
 
 .suggest {
