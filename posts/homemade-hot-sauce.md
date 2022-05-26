@@ -6,10 +6,27 @@ category: snacks
 tags:
   - recipe
 featured_image: /static/img/posts/hot-sauce.webp
-story: Really want to mess around with this recipe. I want to try with
-  fermentation, honey vs, sugar, different fruits, different peppers, adding
-  more veggies (onions and carrots for sure), and maybe some different
-  ingredients on top of all that?
+story: >-
+  Really want to mess around with this recipe. I want to try with fermentation,
+  honey vs, sugar, different fruits, different peppers, adding more veggies
+  (onions and carrots for sure), and maybe some different ingredients on top of
+  all that?
+
+
+  Also tried at one point:
+
+
+  * 10oz chili peppers
+
+  * 1 habanero
+
+  * 3 large garlic cloves
+
+  * 1 shallot
+
+  * 1 tsp sale
+
+  * 2 cups vinegar
 ingredients_list:
   - group_name: Ingredient List
     ingredient:
