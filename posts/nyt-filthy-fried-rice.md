@@ -1,6 +1,7 @@
 ---
 title: NYT Filthy Fried Rice
-tagline: Fried rice is second only to pizza in the "Best Foods Ever" official rankings.
+tagline: 'Fun fact: fried rice is second only to pizza in the "Best Foods Ever"
+  official rankings.'
 easy_slug: nyt-fried-rice
 category: main-dishes
 tags:
@@ -14,9 +15,10 @@ tags:
 featured_image: /static/img/posts/nyt-fried-rice.webp
 story: >-
   The New York Times puts together a mean fried rice! Adding cabbage is a stroke
-  of genius because it basically disappears into the dish. Their technique
-  differs a bit from what I'm used to, with the egg fried separately and place
-  on top. Or you could try it Kaimuki Superette style and poach your egg.
+  of genius because it basically disappears into the dish. 
+
+
+  Their technique differs a bit from what I'm used to, with the egg fried separately and place on top. Or you could try it Kaimuki Superette style and poach your egg.
 
 
   I've removed all mentions of bacon from this recipe, but NYT calls for 3 slices of thick-cut bacon, chopped up, cooked in the pan before everything else, removed, and then folded in with everything else later.
@@ -34,8 +36,8 @@ ingredients_list:
         ingredient: cups shredded cabbage (from about 1/2 small head)
       - ingredient: Salt
       - amount: "4"
-        unit: ""
-        ingredient: garlic cloves, minced
+        unit: cloves
+        ingredient: garlic, minced
       - amount: "6"
         unit: cups
         ingredient: cooked rice, white or brown, preferably day-old
