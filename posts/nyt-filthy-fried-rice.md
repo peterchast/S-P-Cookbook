@@ -69,7 +69,7 @@ instructions:
 
 
       Cook, continuing to stir frequently, until cabbage is soft, 2 to 4 minutes. Stir in garlic, and cook until fragrant, another 1 to 2 minutes. Transfer to a heatproof bowl.
-    title: Soften veggies
+    title: Soften the veggies
   - description: >-
       Add remaining 3 tablespoons oil to skillet and raise heat to high. Add
       rice, and a large pinch of salt, then toss thoroughly to coat with oil.
