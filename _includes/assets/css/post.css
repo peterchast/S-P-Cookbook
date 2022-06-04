@@ -7,16 +7,31 @@ RECIPE INTRO
   justify-content: center;
   text-align: center;
   background-color: var(--color-yellow);
+  padding-top: var(--space-m-l);
 }
 
 .recipe-intro h1 {
   font-family: 'Gulfs Display SemiExpanded', sans-serif;
-  font-size: clamp(3.00rem, calc(1.41rem + 7.97vw), 9.38rem);
+  font-size: clamp(2.50rem, calc(0.78rem + 8.59vw), 9.38rem);
   font-weight: 400;
   color: var(--color-light);
   text-shadow: 0 3px 0 var(--color-dark);
   -webkit-text-stroke: 1.5px var(--color-dark);
   line-height: 1;
+}
+
+.recipe-name {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+
+-webkit-hyphens: auto;
+   -moz-hyphens: auto;
+        hyphens: auto;
+}
+
+.tagline {
+  font-size: var(--space-s-m);
 }
 
 .recipe-intro .tag-list {
@@ -95,10 +110,10 @@ section.recipe-about {
 .recipe-commentary p:first-of-type::first-letter {
     float: left;
     font-family: 'Gulfs Display SemiExpanded', sans-serif;
-    padding: .15rem .5rem 0 .1875rem;
-    font-size: 3.75rem;
+    padding: 2.2rem .5rem 0 .1875rem;
+    font-size: 3.65rem;
     font-weight: 400;
-    line-height: .84;
+    line-height: 0;
     text-transform: uppercase;
 }
 
@@ -234,10 +249,6 @@ ol.instructions-list > li:before {
   flex-wrap: wrap;
 }
 
-div:has(.tip-inner) {
-  background: var(--color-dark);
-}
-
 .tip-activate {
   display: flex;
   align-items: center;
@@ -288,14 +299,6 @@ RECIPE FOOTER
 .recipe-footer>div {
     background-color: var(--color-shade);
     padding: 1.5rem 2rem 1rem 2rem ;
-}
-
-.recipe-footer  ul:not([role=list])>li {
-    margin-bottom: var(--space-m);
-}
-
-.recipe-footer .step-text {
-    border-top: 1px solid var(--color-shell);
 }
 
 .inspired-by p {

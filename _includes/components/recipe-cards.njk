@@ -4,7 +4,7 @@
       <article class="recipe-card">
         <img src="{{ post.data.featured_image }}">
           <div class="recipe-info flow">
-            <p class="category smaller-text">{{ post.data.category }}</p>
+            <p class="category">{{ post.data.category | replace("-", " ") }}</p>
             <h4>{{ post.data.title }}</h4>
             <p class="smaller-text top-s0 recipe-tagline"> {{ post.data.tagline }} </p>
           </div>

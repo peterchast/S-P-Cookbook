@@ -89,23 +89,10 @@ ul:not([role="list"]) {
 
 ul:not([role="list"])>li {
     position: relative;
-    padding-left: 1.4rem;
+    padding-left: var(--space-l);
     margin-top: 0;
     margin-bottom: var(--space-xs);
     line-height: var(--ratio);
-}
-
-ol {
-    position: relative;
-    padding-left: 1.4rem;
-    margin-top: 0;
-    line-height: var(--ratio);
-}
-
-ol>li {
-  padding: 0 0 10px 30px;
-  margin: 0 0 10px;
-  position: relative;
 }
 
 ul:not([role="list"])>li:before {
@@ -117,6 +104,19 @@ ul:not([role="list"])>li:before {
   background: var(--color-giantsorange);
   margin-left: -1.875rem;
   position: absolute;
+}
+
+ol {
+    position: relative;
+    padding-left: var(--space-l);
+    margin-top: 0;
+    line-height: var(--ratio);
+}
+
+ol>li {
+  padding: 0 0 10px var(--space-xs);
+  margin: 0 0 10px;
+  position: relative;
 }
 
 .skip-link:not(:focus), .visually-hidden, :not(:hover)>.heading-permalink {
@@ -150,6 +150,7 @@ header {
   justify-content: space-between;
   padding: var(--space-s) 0px;
   flex-wrap: wrap;
+  gap: var(--space-3xs);
 }
 
 .logo {

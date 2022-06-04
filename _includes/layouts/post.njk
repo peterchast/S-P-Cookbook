@@ -47,7 +47,14 @@ section: post
 
         <div class="recipe-commentary flow">
           {{ story  | markdownify | safe  }}
+
+          <div class="flow inspired-by">
+            <p class="strong">INSPIRATION PROVIDED BY:</p>
+            &nbsp;{{ inspired_by | markdownify | safe }}
+      </div>
          </div>
+
+
 
     </div>
   </section>
@@ -59,7 +66,7 @@ section: post
       {% for groups in ingredients_list %}
       <div class="recipe-component flow">
       <h4 class="highlight"> {% if groups.group_name != "Ingredient List" %} {{ groups.group_name }} {% endif %}</h4>
-      <ul>
+      <ul class="no-padding">
         {% for items in groups.ingredient %}
           <li>
             <span class="quant">{{ items.amount }}</span> <span class="unit">{{ items.unit }}</span> <span class="desc">{{ items.ingredient }}</span>
@@ -142,36 +149,8 @@ section: post
 
     </li>
   {% endfor %}
-  <li>
-  <div class="get-some flow">
-    <h3 class="step-title">Get Some!</h3>
-    <p class="step-text"></p><p>You just made a recipe! I'm so proud of you! It's time to honor your dilligence and perserverance by consuming the fruits (or vegetables, et al.) of your labor.</p>
-    <p><em>What's that? You made a dessert to share with friends at a dinner party? Take a big bite anyway!<em></p>
-    </div>
-  </li>
 </ol>
 </div>
-</section>
-
-  {% if other_notes.length or inspired_by.length %}
-<section class="recipe-footer flow">
-  <div class="narrow-wrapper flow">
-    <h3 class="step-title">More Recipe Notes</h3>
-      <p class="step-text"></p>
-      <ul>
-        {% for items in other_notes %}
-        <li>
-          {{ items.note }}
-        </li>
-        {% endfor %}
-        <li>
-        <div class="flow inspired-by">
-          <p class="strong">Inspiration provided by:</p>
-          &nbsp;{{ inspired_by | markdownify | safe }}
-    </li>
-      </ul>
-    </div>
-    {% endif %}
 </section>
 
 </article>

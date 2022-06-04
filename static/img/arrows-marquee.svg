@@ -1,6 +1,11 @@
-<svg version="1.1"
-     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 624.64 50" class="arrows-marquee">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 624.64 50" class="arrows-marquee">
+  <defs>
+  <style>
+    .arrows {
+      fill: red;
+    }
+  </style>
+</defs>
     <g>
         <path class="arrows arrows-1" d="M49.81,25L24.81,0H0L25,25,0,50H24.81l25-25Z"/>
         <path class="arrows arrows-2" d="M93.95,25L68.95,0h-24.81l25,25-25,25h24.81l25-25Z"/>
