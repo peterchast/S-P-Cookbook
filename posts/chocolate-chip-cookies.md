@@ -87,20 +87,25 @@ instructions:
       hours. The dough may be used in batches, and can be refrigerated for up to
       72 hours.
   - title: Preheat to 350°F
-    description: When you’re ready to bake, preheat oven to 350°F. Remove the bowl
-      of dough from the refrigerator, and allow it to soften slightly. Line a
-      baking sheet with parchment paper or a nonstick baking mat.
+    description: When you’re ready to bake, preheat oven to 350°F (325°F if frozen).
+      Remove the bowl of dough from the refrigerator, and allow it to soften
+      slightly. Line a baking sheet with parchment paper or a nonstick baking
+      mat.
   - description: Using a standard-size ice cream scoop – about 1/3 cup – scoop six
       mounds of dough onto the baking sheet, making sure to space them evenly.
       Sprinkle lightly with sea salt.
     title: Scoop & sprinkle with salt
   - description: >-
       Bake until golden brown but still soft, 15 to 20 minutes (Scotia says 17
-      minutes!). Transfer the baking sheet to a wire rack for 10 minutes, then
-      transfer the cookies onto the rack to cool a bit more.
+      minutes For our oven, 13 min for the toaster oven). Transfer the baking
+      sheet to a wire rack for 10 minutes, then transfer the cookies onto the
+      rack to cool a bit more.
 
 
       Repeat with the remaining dough.
+
+
+      \* If baking from frozen, we’re still figuring out the timing but try 20 minutes for now.
     title: Bake 'em up!
 inspired_by: A recipe Scotia found on a now-defunct written by [Kate
   Miss](http://www.katemiss.com/).
