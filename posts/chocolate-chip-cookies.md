@@ -17,8 +17,8 @@ ingredients_list:
       - amount: 8 1/2
         unit: oz
         ingredient: cake flour
-      - amount: 1 2/3
-        unit: cups
+      - amount: 8 1/2
+        unit: oz
         ingredient: bread flour
       - amount: 1 1/4
         unit: teaspoon
@@ -39,7 +39,7 @@ ingredients_list:
         unit: oz
         ingredient: granulated sugar
       - amount: "2"
-        ingredient: large eggs
+        ingredient: large eggs (room temp)
       - amount: "2"
         unit: teaspoons
         ingredient: vanilla extract
@@ -53,8 +53,23 @@ total_time: 24+ hrs
 yield: 24 cookies
 instructions:
   - title: Whisk a few dry ingredients
-    description: Combine flours, baking soda, baking powder, and salt in a bowl.
-      Whisk well; then set aside.
+    description: Combine dry ingredients in a bowl. Whisk well; then set aside.
+    ingredients_used:
+      - amount: 8 1/2
+        unit: oz
+        ingredient: Bread flour
+      - amount: 8 1/2
+        unit: oz
+        ingredient: Cake flour
+      - ingredient: Baking soda
+        amount: 1 1/4
+        unit: tsp.
+      - ingredient: Baking powder
+        amount: "1 1/2 "
+        unit: tsp
+      - ingredient: salt
+        amount: 1 1/2
+        unit: tsp
   - title: Mix sugar & butter
     description: Using a mixer fitted with paddle attachment, cream butter and
       sugars until very light and fluffy, about 3 to 5 minutes.
@@ -63,12 +78,8 @@ instructions:
       in the vanilla. Scrape down the sides of the bowl with a rubber spatula as
       needed.
   - title: Incorporate dry ingredients
-    description: >-
-      Reduce the mixer speed to low; then add dry ingredients, and mix until
-      just combined. 
-
-
-      (Unless you have a plastic guard that sits around the rim of the bowl, this will make a big mess at first, with flour flying everywhere. I found that carefully holding a dish towel around the top of the bowl helped a lot.)
+    description: Reduce the mixer speed to low; then add dry ingredients, and mix
+      until just combined.
   - title: Chocolate time!
     description: Add the chocolate chips, and mix briefly to incorporate.
   - title: Wrap & refrigerate
