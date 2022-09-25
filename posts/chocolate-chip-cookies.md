@@ -50,7 +50,7 @@ ingredients_list:
       - ingredient: Sea salt or kosher salt for garnishing
 active_time: 30 mins
 total_time: 24+ hrs
-yield: 24 cookies
+yield: 18 cookies
 instructions:
   - title: Whisk a few dry ingredients
     description: Combine dry ingredients in a bowl. Whisk well; then set aside.
