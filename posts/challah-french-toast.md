@@ -24,6 +24,9 @@ ingredients_list:
       - amount: "1"
         unit: loaf
         ingredient: challah bread (or brioche) cut into thick slices
+      - amount: "6"
+        unit: ""
+        ingredient: large eggs
       - amount: "1.5"
         unit: cups
         ingredient: whole milk
@@ -36,11 +39,11 @@ ingredients_list:
       - amount: 1/2
         unit: teaspoon
         ingredient: ground cinnamon
-      - amount: 1/4 teaspoon
-        unit: salt
       - amount: "3"
         unit: tablespoons
         ingredient: unsalted butter
+      - amount: 1/4 teaspoon
+        unit: salt
       - ingredient: plenty of tasty toppings!
 active_time: 20 mins
 total_time: 20 mins
