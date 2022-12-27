@@ -50,7 +50,7 @@ ingredients_list:
         amount: "4"
         unit: tablespoons
       - ingredient: bourbon
-        amount: "2"
+        amount: "3"
         unit: tablespoons
       - ingredient: grated fresh ginger
         amount: "2"
