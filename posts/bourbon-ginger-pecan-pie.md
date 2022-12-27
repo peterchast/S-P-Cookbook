@@ -69,7 +69,7 @@ ingredients_list:
         unit: cups
       - ingredient: (50g) candied ginger, finely chopped
         amount: 1/4
-        unit: cuo
+        unit: cup
 active_time: 30 mins
 total_time: 1 hr 30 mins
 yield: 1 pie
