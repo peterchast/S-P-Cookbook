@@ -11,10 +11,12 @@ tags:
   - sweet&savory
 featured_image: /static/img/posts/challah-french-toast.webp
 story: >-
-  This recipe was optimized for challah cooked in my 1 lb loaf pan. My trick is
-  to overproof the dough until it's nearly mushrooming over the rim, and then
-  give it a bake. The next day (or the day after that), the loaf is perfect for
-  eight, thick, custardy slices of French toast.  
+  This recipe was optimized for challah ([1/2 of the dough from this
+  recipe](https://www.kingarthurbaking.com/recipes/classic-challah-recipe))
+  cooked in my 1 lb loaf pan. My trick is to overproof the dough until it's
+  nearly mushrooming over the rim, and then give it a bake. The next day (or the
+  day after that), the loaf is perfect for eight, thick, custardy slices of
+  French toast. 
 
 
   *IMPORTANT:* If your bread is already pretty stale, you can skip the first two steps.
