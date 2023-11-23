@@ -33,7 +33,7 @@ ingredients_list:
       - amount: "4"
         unit: ounces
         ingredient: (115g) chilled unsalted butter, cubed
-      - amount: 3-4
+      - amount: 2-3
         unit: tablespoons
         ingredient: ice water
   - group_name: Pie Filling
@@ -80,7 +80,7 @@ instructions:
       using your hands.) Add the chilled butter and mix or pulse the dough until
       the butter is broken up into small pieces about the size of peas.
     title: Mix the dough
-  - description: Add 3 tablespoons of ice water and mix until the dough begins to
+  - description: Add 2 tablespoons of ice water and mix until the dough begins to
       come together. If necessary, add 1 more tablespoon of water if the dough
       needs it to come together. Turn the dough out on a work surface and give
       it a few turns with your hands. Shape the dough into a disk, wrap in
