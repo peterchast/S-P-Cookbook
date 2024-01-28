@@ -2,10 +2,13 @@
 title: Quick(ish) Cinnamon Rolls
 tagline: Some say 45 minutes, some say 2-3 hours. They’re delish and way quicker
   than overnight cinnamon rolls!
-easy_slug: Cinnrolls
+easy_slug: cinnamon-rolls
 category: main-dishes
 tags:
-  - recipe
+  - breakfast
+  - cinnamon
+  - sweet
+  - baked-goods
 featured_image: /static/img/posts/06e51a4a-fce9-4418-9697-21355c04e0a2.jpeg
 story: Some mornings you just get the inkling for cinnamon rolls But all the
   recipes call for forethought I just don’t possess. On one of those mornings,
